@@ -11,6 +11,9 @@
     - Not for async stubs
   - Enum message deprecation is supported
     - Enum field deprecation is not
+- Change signatures of `HasField`, `ClearField` and `WhichOneOf` to be positional only
+  - This has always been the case, but starting in 3.13 stubtest is able to detect it.
+  - `pb2.Simple2().ClearField(field_name="a_string") -> TypeError: Simple2.ClearField() takes no keyword arguments`
 
 ## 3.6.0
 

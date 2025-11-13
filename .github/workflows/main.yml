@@ -9,17 +9,16 @@ on:
 
 jobs:
   run_test:
-    name: mypy - ${{ matrix.py-ver-mypy-protobuf }} - unittest - ${{ matrix.py-ver-unit-tests }}
+    name: mypy-protobuf - ${{ matrix.py-ver-mypy-protobuf }} - mypy ${{ matrix.py-ver-mypy }} - unittest - ${{ matrix.py-ver-unit-tests }}
     runs-on: ubuntu-24.04
     # Some CI issues regarding ubuntu-latest
     # runs-on: ubuntu-latest
-    env:
-      PY_VER_MYPY: 3.8.17
     strategy:
       matrix:
         # Running mypy-protobuf itself
         py-ver-mypy-protobuf: [3.8.17, 3.9.17, 3.10.12, 3.11.4, 3.12.12, 3.13.9, 3.14.0]
         py-ver-unit-tests: [3.8.17, 3.13.9, 3.14.0]
+        py-ver-mypy: [3.8.17, 3.9.17, 3.10.12, 3.11.4, 3.12.12, 3.13.9, 3.14.0]
 
     steps:
       - uses: actions/checkout@v4
@@ -48,8 +47,8 @@ jobs:
       - name: Cache pyenv mypy ver
         uses: actions/cache@v4
         with:
-          path: ~/.pyenv/versions/${{env.PY_VER_MYPY}}
-          key: pyenv-${{env.PY_VER_MYPY}}-${{hashFiles('setup.py')}}
+          path: ~/.pyenv/versions/${{matrix.py-ver-mypy}}
+          key: pyenv-${{matrix.py-ver-mypy}}-${{hashFiles('setup.py')}}
       - name: Install pyenv
         run: |
           if [ ! -e ~/.pyenv/bin/pyenv ]; then
@@ -62,7 +61,7 @@ jobs:
           eval "$(pyenv init --path)"
           eval "$(pyenv virtualenv-init -)"
 
-          for PY in ${{matrix.py-ver-mypy-protobuf}} ${{env.PY_VER_MYPY}} ${{matrix.py-ver-unit-tests}}; do
+          for PY in ${{matrix.py-ver-mypy-protobuf}} ${{matrix.py-ver-mypy}} ${{matrix.py-ver-unit-tests}}; do
             if [ ! -e ~/.pyenv/versions/$PY ]; then
               pyenv install --skip-existing $PY
               pyenv shell $PY
@@ -73,6 +72,7 @@ jobs:
         env:
           PY_VER_MYPY_PROTOBUF: ${{matrix.py-ver-mypy-protobuf}}
           PY_VER_UNIT_TESTS: ${{matrix.py-ver-unit-tests}}
+          PY_VER_MYPY: ${{matrix.py-ver-mypy}}
           VALIDATE: 1
         run: |
           export PATH="$HOME/.pyenv/bin:$PATH"
