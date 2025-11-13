@@ -23,7 +23,7 @@ report_deprecated_as_note = true
 
 [tool.pyright]
 venvPath = "."
-venv = "venv_3.8.17"
+venv = "venv_3.14.0"
 # verboseOutput = true
 extraPaths = ["test/generated"]
 include = [
@@ -33,4 +33,9 @@ include = [
 exclude = [
     "**/*_pb2.py",
     "**/*_pb2_grpc.py"
+]
+
+executionEnvironments = [
+  { root = "test/generated", extraPaths = ["./"], reportIncompatibleMethodOverride = "none" },
+  { root = "mypy_protobuf/extensions_pb2.pyi", reportIncompatibleMethodOverride = "none" },
 ]
