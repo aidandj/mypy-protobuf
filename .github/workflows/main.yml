@@ -9,7 +9,7 @@ on:
 
 jobs:
   run_test:
-    name: mypy-protobuf - ${{ matrix.py-ver-mypy-protobuf }} - mypy ${{ matrix.py-ver-mypy }} - unittest - ${{ matrix.py-ver-unit-tests }}
+    name: mypy-protobuf - ${{ matrix.py-ver-mypy-protobuf }} - mypy ${{ matrix.py-ver-mypy }} - unittest - ${{ matrix.py-ver-unit-tests }} - protobuf ${{ matrix.protobuf-version }}
     runs-on: ubuntu-24.04
     # Some CI issues regarding ubuntu-latest
     # runs-on: ubuntu-latest
@@ -19,6 +19,14 @@ jobs:
         py-ver-mypy-protobuf: [3.8.17, 3.9.17, 3.10.12, 3.11.4, 3.12.12, 3.13.9, 3.14.0]
         py-ver-unit-tests: [3.8.17, 3.13.9, 3.14.0]
         py-ver-mypy: [3.8.17, 3.9.17, 3.10.12, 3.11.4, 3.12.12, 3.13.9, 3.14.0]
+        protobuf-version: [5.28.3, 6.33.1]
+        exclude:
+          - protobuf-version: 6.33.1
+            py-ver-mypy-protobuf: 3.8.17
+          - protobuf-version: 6.33.1
+            py-ver-unit-tests: 3.8.17
+          - protobuf-version: 6.33.1
+            py-ver-mypy: 3.8.17
 
     steps:
       - uses: actions/checkout@v4
@@ -27,58 +35,19 @@ jobs:
           echo ::set-output name=PROTOBUF_VERSION::$(grep "^protobuf>=" test_requirements.txt | cut -f2 -d=)
           echo ::set-output name=PYRIGHT_VERSION::$(grep '"pyright"' .github/package.json | cut -d\" -f4)
         id: read_versions
-      - name: Cache pyenv
-        uses: actions/cache@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
         with:
-          path: |
-            ~/.pyenv
-            !~/.pyenv/versions
-          key: pyenv-installation-2
-      - name: Cache pyenv mypy-protobuf ver
-        uses: actions/cache@v4
-        with:
-          path: ~/.pyenv/versions/${{matrix.py-ver-mypy-protobuf}}
-          key: pyenv-${{matrix.py-ver-mypy-protobuf}}-${{hashFiles('setup.py')}}
-      - name: Cache pyenv unit tests 3 ver
-        uses: actions/cache@v4
-        with:
-          path: ~/.pyenv/versions/${{matrix.py-ver-unit-tests}}
-          key: pyenv-${{matrix.py-ver-unit-tests}}-${{hashFiles('setup.py')}}
-      - name: Cache pyenv mypy ver
-        uses: actions/cache@v4
-        with:
-          path: ~/.pyenv/versions/${{matrix.py-ver-mypy}}
-          key: pyenv-${{matrix.py-ver-mypy}}-${{hashFiles('setup.py')}}
-      - name: Install pyenv
-        run: |
-          if [ ! -e ~/.pyenv/bin/pyenv ]; then
-            rm -rf ~/.pyenv
-            curl https://pyenv.run | bash
-          fi
-
-          export PATH="$HOME/.pyenv/bin:$PATH"
-          eval "$(pyenv init -)"
-          eval "$(pyenv init --path)"
-          eval "$(pyenv virtualenv-init -)"
-
-          for PY in ${{matrix.py-ver-mypy-protobuf}} ${{matrix.py-ver-mypy}} ${{matrix.py-ver-unit-tests}}; do
-            if [ ! -e ~/.pyenv/versions/$PY ]; then
-              pyenv install --skip-existing $PY
-              pyenv shell $PY
-              python -m pip install virtualenv
-            fi
-          done
+          enable-cache: true # Optional: Enable caching for uv's package cache
+          cache-dependency-glob: '**/*requirements.txt' # Optional: Specify a glob pattern to determine cache keys
       - name: Run Tests (./run_test.sh)
         env:
           PY_VER_MYPY_PROTOBUF: ${{matrix.py-ver-mypy-protobuf}}
           PY_VER_UNIT_TESTS: ${{matrix.py-ver-unit-tests}}
           PY_VER_MYPY: ${{matrix.py-ver-mypy}}
+          PYTHON_PROTOBUF_VERSION: ${{matrix.protobuf-version}}
           VALIDATE: 1
         run: |
-          export PATH="$HOME/.pyenv/bin:$PATH"
-          eval "$(pyenv init -)"
-          eval "$(pyenv init --path)"
-          eval "$(pyenv virtualenv-init -)"
           ./run_test.sh
 
       - name: Run Pyright
