@@ -87,11 +87,6 @@ PROTO_ENUM_RESERVED = {
 }
 
 
-def _build_typevar_name(service_name: str, method_name: str) -> str:
-    # Prefix with underscore to avoid public api error: https://stackoverflow.com/a/78871465
-    return f"_{service_name}{method_name}Type"
-
-
 def _mangle_global_identifier(name: str) -> str:
     """
     Module level identifiers are mangled and aliased so that they can be disambiguated
@@ -180,7 +175,7 @@ class PkgWriter(object):
         eg. self._import("typing", "Literal") -> "Literal"
         """
         if path == "typing_extensions":
-            stabilization = {"TypeAlias": (3, 10), "TypeVar": (3, 13)}
+            stabilization = {"TypeAlias": (3, 10), "TypeVar": (3, 13), "type_check_only": (3, 12)}
             assert name in stabilization
             if not self.typing_extensions_min or self.typing_extensions_min < stabilization[name]:
                 self.typing_extensions_min = stabilization[name]
@@ -289,7 +284,7 @@ class PkgWriter(object):
 
         return lines
 
-    def _write_deprecation_warning(self, scl: SourceCodeLocation, default_message: str) -> None:
+    def _get_deprecation_message(self, scl: SourceCodeLocation, default_message: str) -> str:
         msg = default_message
         if not self.use_default_depreaction_warnings and (comments := self._get_comments(scl)):
             # Make sure the comment string is a valid python string literal
@@ -301,6 +296,10 @@ class PkgWriter(object):
             except SyntaxError as e:
                 print(f"Warning: Deprecation comment {joined} could not be parsed as a python string literal. Using default deprecation message. {e}", file=sys.stderr)
                 pass
+        return msg
+
+    def _write_deprecation_warning(self, scl: SourceCodeLocation, default_message: str) -> None:
+        msg = self._get_deprecation_message(scl, default_message)
         self._write_line(
             '@{}("""{}""")',
             self._import("warnings", "deprecated"),
@@ -361,16 +360,38 @@ class PkgWriter(object):
         values: Iterable[Tuple[int, d.EnumValueDescriptorProto]],
         value_type: str,
         scl_prefix: SourceCodeLocation,
+        *,
+        class_attributes: bool = False,
     ) -> None:
         for i, val in values:
             if val.name in PYTHON_RESERVED:
                 continue
 
             scl = scl_prefix + [i]
-            self._write_line(
-                f"{val.name}: {value_type}  # {val.number}",
-            )
-            self._write_comments(scl)
+            # Class level
+            if class_attributes:
+                if val.options.deprecated:
+                    self._write_line("@property")
+                    self._write_deprecation_warning(
+                        scl + [d.EnumValueDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.EnumOptions.DEPRECATED_FIELD_NUMBER],
+                        "This enum value has been marked as deprecated using proto enum value options.",
+                    )
+                    self._write_line(
+                        f"def {val.name}(self) -> {value_type}: {'' if self._has_comments(scl) else '...'}  # {val.number}",
+                    )
+                    with self._indent():
+                        self._write_comments(scl)
+                else:
+                    self._write_line(
+                        f"{val.name}: {value_type}  # {val.number}",
+                    )
+                    self._write_comments(scl)
+            # Module level
+            else:
+                self._write_line(
+                    f"{val.name}: {value_type}  # {val.number}",
+                )
+                self._write_comments(scl)
 
     def write_module_attributes(self) -> None:
         wl = self._write_line
@@ -417,6 +438,7 @@ class PkgWriter(object):
                     [(i, v) for i, v in enumerate(enum.value) if v.name not in PROTO_ENUM_RESERVED],
                     value_type_helper_fq,
                     scl + [d.EnumDescriptorProto.VALUE_FIELD_NUMBER],
+                    class_attributes=True,
                 )
             wl("")
 
@@ -435,6 +457,7 @@ class PkgWriter(object):
                 if prefix == "":
                     wl("")
 
+            # Write the module level constants for enum values
             self.write_enum_values(
                 enumerate(enum.value),
                 value_type_fq,
@@ -507,9 +530,34 @@ class PkgWriter(object):
                         continue
                     field_type = self.python_type(field)
                     if is_scalar(field) and field.label != d.FieldDescriptorProto.LABEL_REPEATED:
-                        # Scalar non repeated fields are r/w
-                        wl(f"{field.name}: {field_type}")
-                        self._write_comments(scl + [d.DescriptorProto.FIELD_FIELD_NUMBER, idx])
+                        # Scalar non repeated fields are r/w, generate getter and setter if deprecated
+                        scl_field = scl + [d.DescriptorProto.FIELD_FIELD_NUMBER, idx]
+                        if field.options.deprecated:
+                            wl("@property")
+                            self._write_deprecation_warning(
+                                scl_field + [d.FieldDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.FieldOptions.DEPRECATED_FIELD_NUMBER],
+                                "This field has been marked as deprecated using proto field options.",
+                            )
+                            body = " ..." if not self._has_comments(scl_field) else ""
+                            wl(f"def {field.name}(self) -> {field_type}:{body}")
+                            if self._has_comments(scl_field):
+                                with self._indent():
+                                    self._write_comments(scl_field)
+                                wl("")
+                            wl(f"@{field.name}.setter")
+                            self._write_deprecation_warning(
+                                scl_field + [d.FieldDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.FieldOptions.DEPRECATED_FIELD_NUMBER],
+                                "This field has been marked as deprecated using proto field options.",
+                            )
+                            body = " ..." if not self._has_comments(scl_field) else ""
+                            wl(f"def {field.name}(self, value: {field_type}) -> None:{body}")
+                            if self._has_comments(scl_field):
+                                with self._indent():
+                                    self._write_comments(scl_field)
+                                wl("")
+                        else:
+                            wl(f"{field.name}: {field_type}")
+                            self._write_comments(scl_field)
 
                 for idx, field in enumerate(desc.field):
                     if field.name in PYTHON_RESERVED:
@@ -519,6 +567,11 @@ class PkgWriter(object):
                         # r/o Getters for non-scalar fields and scalar-repeated fields
                         scl_field = scl + [d.DescriptorProto.FIELD_FIELD_NUMBER, idx]
                         wl("@property")
+                        if field.options.deprecated:
+                            self._write_deprecation_warning(
+                                scl_field + [d.FieldDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.FieldOptions.DEPRECATED_FIELD_NUMBER],
+                                "This field has been marked as deprecated using proto field options.",
+                            )
                         body = " ..." if not self._has_comments(scl_field) else ""
                         wl(f"def {field.name}(self) -> {field_type}:{body}")
                         if self._has_comments(scl_field):
@@ -816,45 +869,31 @@ class PkgWriter(object):
             wl("...")
         wl("")
 
-    def write_grpc_type_vars(self, service: d.ServiceDescriptorProto) -> None:
+    def write_grpc_stub_methods(self, service: d.ServiceDescriptorProto, scl_prefix: SourceCodeLocation, *, is_async: bool, both: bool = False, ignore_override_errors: bool = False) -> None:
         wl = self._write_line
         methods = [(i, m) for i, m in enumerate(service.method) if m.name not in PYTHON_RESERVED]
         if not methods:
             return
-        for _, method in methods:
-            wl("{} = {}(", _build_typevar_name(service.name, method.name), self._import("typing_extensions", "TypeVar"))
-            with self._indent():
-                wl("'{}',", _build_typevar_name(service.name, method.name))
-                wl("{}[", self._callable_type(method, is_async=False))
-                with self._indent():
-                    wl("{},", self._input_type(method))
-                    wl("{},", self._output_type(method))
-                wl("],")
-                wl("{}[", self._callable_type(method, is_async=True))
-                with self._indent():
-                    wl("{},", self._input_type(method))
-                    wl("{},", self._output_type(method))
-                wl("],")
-                wl("default={}[", self._callable_type(method, is_async=False))
-                with self._indent():
-                    wl("{},", self._input_type(method))
-                    wl("{},", self._output_type(method))
-                wl("],")
-            wl(")")
-            wl("")
 
-    def write_self_types(self, service: d.ServiceDescriptorProto, is_async: bool) -> None:
-        wl = self._write_line
-        methods = [(i, m) for i, m in enumerate(service.method) if m.name not in PYTHON_RESERVED]
-        if not methods:
-            return
-        for _, method in methods:
-            with self._indent():
-                wl("{}[", self._callable_type(method, is_async=is_async))
+        def type_str(method: d.MethodDescriptorProto, is_async: bool) -> str:
+            return f"{self._callable_type(method, is_async=is_async)}[{self._input_type(method)}, {self._output_type(method)}]"
+
+        for i, method in methods:
+            scl = scl_prefix + [d.ServiceDescriptorProto.METHOD_FIELD_NUMBER, i]
+            wl("@property")
+            if method.options.deprecated:
+                self._write_deprecation_warning(
+                    scl + [d.MethodDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.MethodOptions.DEPRECATED_FIELD_NUMBER],
+                    "This method has been marked as deprecated using proto method options.",
+                )
+            if both:
+                wl("def {}(self) -> {}[{}, {}]:{}", method.name, self._import("typing", "Union"), type_str(method, is_async=False), type_str(method, is_async=True), " ..." if not self._has_comments(scl) else " ")
+            else:
+                wl("def {}(self) -> {}:{}{}", method.name, type_str(method, is_async=is_async), " ..." if not self._has_comments(scl) else "", "" if not ignore_override_errors else "  # type: ignore[override]")
+            if self._has_comments(scl):
                 with self._indent():
-                    wl("{},", self._input_type(method))
-                    wl("{},", self._output_type(method))
-                wl("],")
+                    if not self._write_comments(scl):
+                        wl("...")
 
     def write_grpc_methods(self, service: d.ServiceDescriptorProto, scl_prefix: SourceCodeLocation) -> None:
         wl = self._write_line
@@ -885,19 +924,6 @@ class PkgWriter(object):
                         wl("...")
             wl("")
 
-    def write_grpc_stub_methods(self, service: d.ServiceDescriptorProto, scl_prefix: SourceCodeLocation, is_async: bool = False) -> None:
-        wl = self._write_line
-        methods = [(i, m) for i, m in enumerate(service.method) if m.name not in PYTHON_RESERVED]
-        if not methods:
-            wl("...")
-            wl("")
-        for i, method in methods:
-            scl = scl_prefix + [d.ServiceDescriptorProto.METHOD_FIELD_NUMBER, i]
-
-            wl("{}: {}", method.name, f"{_build_typevar_name(service.name, method.name)}")
-            self._write_comments(scl)
-            wl("")
-
     def write_grpc_services(
         self,
         services: Iterable[d.ServiceDescriptorProto],
@@ -906,14 +932,15 @@ class PkgWriter(object):
         wl = self._write_line
         wl("GRPC_GENERATED_VERSION: str")
         wl("GRPC_VERSION: str")
+        wl("")
         for i, service in enumerate(services):
             if service.name in PYTHON_RESERVED:
                 continue
 
             scl = scl_prefix + [i]
 
-            # Type vars
-            self.write_grpc_type_vars(service)
+            class_name = f"{service.name}Stub"
+            async_class_alias = f"{service.name}AsyncStub"
 
             # The stub client
             if service.options.deprecated:
@@ -921,43 +948,44 @@ class PkgWriter(object):
                     scl + [d.ServiceDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.ServiceOptions.DEPRECATED_FIELD_NUMBER],
                     "This stub has been marked as deprecated using proto service options.",
                 )
-            class_name = f"{service.name}Stub"
             wl(
-                "class {}({}[{}]):",
+                "class {}:",
                 class_name,
-                self._import("typing", "Generic"),
-                ", ".join(f"{_build_typevar_name(service.name, method.name)}" for method in service.method),
             )
             with self._indent():
                 if self._write_comments(scl):
                     wl("")
-
                 # Write sync overload
                 wl("@{}", self._import("typing", "overload"))
-                wl("def __init__(self: {}[", class_name)
-                self.write_self_types(service, False)
                 wl(
-                    "], channel: {}) -> None: ...",
+                    "def __new__(cls, channel: {}) -> {}: ...",
                     self._import("grpc", "Channel"),
+                    class_name,
                 )
-                wl("")
 
                 # Write async overload
                 wl("@{}", self._import("typing", "overload"))
-                wl("def __init__(self: {}[", class_name)
-                self.write_self_types(service, True)
                 wl(
-                    "], channel: {}) -> None: ...",
+                    "def __new__(cls, channel: {}) -> {}: ...",
                     self._import("grpc.aio", "Channel"),
+                    async_class_alias,
                 )
+                self.write_grpc_stub_methods(service, scl, is_async=False)
                 wl("")
 
-                self.write_grpc_stub_methods(service, scl)
-
-            # Write AsyncStub alias
-            wl("{}AsyncStub: {} = {}[", service.name, self._import("typing_extensions", "TypeAlias"), class_name)
-            self.write_self_types(service, True)
-            wl("]")
+            # Write AsyncStub
+            if service.options.deprecated:
+                self._write_deprecation_warning(
+                    scl + [d.ServiceDescriptorProto.OPTIONS_FIELD_NUMBER] + [d.ServiceOptions.DEPRECATED_FIELD_NUMBER],
+                    "This stub has been marked as deprecated using proto service options.",
+                )
+            wl("@{}", self._import("typing", "type_check_only"))
+            wl("class {}({}):", async_class_alias, class_name)
+            with self._indent():
+                if self._write_comments(scl):
+                    wl("")
+                wl("def __init__(self, channel: {}) -> None: ...", self._import("grpc.aio", "Channel"))
+                self.write_grpc_stub_methods(service, scl, is_async=True, ignore_override_errors=True)
             wl("")
 
             # The service definition interface

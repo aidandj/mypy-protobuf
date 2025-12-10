@@ -160,13 +160,13 @@ for PY_VER in $PY_VER_UNIT_TESTS; do
         source "$MYPY_VENV"/bin/activate
         # Run concrete mypy
         CONCRETE_MODULES=( -m test.test_concrete )
-        MYPYPATH=$MYPYPATH:test/generated_concrete mypy ${CUSTOM_TYPESHED_DIR_ARG:+"$CUSTOM_TYPESHED_DIR_ARG"} --python-executable="$UNIT_TESTS_VENV"/bin/python --python-version="$PY_VER_MYPY_TARGET" "${CONCRETE_MODULES[@]}"
+        MYPYPATH=$MYPYPATH:test/generated_concrete mypy ${CUSTOM_TYPESHED_DIR_ARG:+"$CUSTOM_TYPESHED_DIR_ARG"} --report-deprecated-as-note --no-incremental --python-executable="$UNIT_TESTS_VENV"/bin/python --python-version="$PY_VER_MYPY_TARGET" "${CONCRETE_MODULES[@]}"
 
         export MYPYPATH=$MYPYPATH:test/generated
 
         # Run mypy
         MODULES=( -m test.test_generated_mypy -m test.test_grpc_usage -m test.test_grpc_async_usage )
-        mypy ${CUSTOM_TYPESHED_DIR_ARG:+"$CUSTOM_TYPESHED_DIR_ARG"} --python-executable="$UNIT_TESTS_VENV"/bin/python --python-version="$PY_VER_MYPY_TARGET" "${MODULES[@]}"
+        mypy ${CUSTOM_TYPESHED_DIR_ARG:+"$CUSTOM_TYPESHED_DIR_ARG"} --report-deprecated-as-note --no-incremental --python-executable="$UNIT_TESTS_VENV"/bin/python --python-version="$PY_VER_MYPY_TARGET" "${MODULES[@]}"
 
         # Run stubtest. Stubtest does not work with python impl - only cpp impl
         uv pip install -p "$MYPY_VENV" -r test_requirements.txt
@@ -178,6 +178,7 @@ for PY_VER in $PY_VER_UNIT_TESTS; do
             if [[ "$PY_VER_MYPY" == "3.13.9" ]] || [[ "$PY_VER_MYPY" == "3.14.0" ]]; then
                 echo "Skipping stubtest for Python $PY_VER_MYPY until positional argument decision is made"
             else
+                echo "Running stubtest for Python $PY_VER_MYPY with API implementation: $API_IMPL"
                 PYTHONPATH=test/generated python3 -m mypy.stubtest ${CUSTOM_TYPESHED_DIR_ARG:+"$CUSTOM_TYPESHED_DIR_ARG"} --allowlist stubtest_allowlist.txt testproto
             fi
         fi
