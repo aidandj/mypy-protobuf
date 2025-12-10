@@ -442,6 +442,12 @@ protoc --python_out=output/location --mypy_out=output/location
 mypy --target-version=2.7 {files}
 ```
 
+## Test proto messages
+
+* `proto/google/protobuf/*.proto` come from https://github.com/protocolbuffers/protobuf/tree/main/src/google/protobuf
+* `proto/editions/golden/*` comes from https://github.com/protocolbuffers/protobuf/tree/main/editions/golden
+* `proto/conformance/*` comes from https://github.com/protocolbuffers/protobuf/tree/main/conformance
+
 ## Contributing
 
 Contributions to the implementation are welcome. Please run tests using `./run_test.sh`.
