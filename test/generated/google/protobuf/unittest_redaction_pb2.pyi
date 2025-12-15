@@ -20,6 +20,11 @@ if sys.version_info >= (3, 10):
 else:
     from typing_extensions import TypeAlias as _TypeAlias
 
+if sys.version_info >= (3, 13):
+    from warnings import deprecated as _deprecated
+else:
+    from typing_extensions import deprecated as _deprecated
+
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class _MetaAnnotatedEnum:
@@ -138,7 +143,12 @@ class TestRedactedMessage(_message.Message):
     TEST_DIRECT_MESSAGE_ENUM_FIELD_NUMBER: _builtins.int
     TEST_NESTED_MESSAGE_ENUM_FIELD_NUMBER: _builtins.int
     TEST_REDACTED_MESSAGE_ENUM_FIELD_NUMBER: _builtins.int
-    text_field: _builtins.str
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def text_field(self) -> _builtins.str: ...
+    @text_field.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def text_field(self, value: _builtins.str) -> None: ...
     meta_annotated: _builtins.str
     repeated_meta_annotated: _builtins.str
     unredacted_repeated_annotations: _builtins.str

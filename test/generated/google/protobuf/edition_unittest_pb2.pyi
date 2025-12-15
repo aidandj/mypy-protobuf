@@ -748,11 +748,23 @@ class TestDeprecatedFields(_message.Message):
     DEPRECATED_MESSAGE_FIELD_NUMBER: _builtins.int
     DEPRECATED_INT32_IN_ONEOF_FIELD_NUMBER: _builtins.int
     NESTED_FIELD_NUMBER: _builtins.int
-    deprecated_int32: _builtins.int
-    deprecated_int32_in_oneof: _builtins.int
     @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_int32(self) -> _builtins.int: ...
+    @deprecated_int32.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_int32(self, value: _builtins.int) -> None: ...
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_int32_in_oneof(self) -> _builtins.int: ...
+    @deprecated_int32_in_oneof.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_int32_in_oneof(self, value: _builtins.int) -> None: ...
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
     def deprecated_repeated_string(self) -> _containers.RepeatedScalarFieldContainer[_builtins.str]: ...
     @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
     def deprecated_message(self) -> Global___TestAllTypes.NestedMessage: ...
     @_builtins.property
     def nested(self) -> Global___TestDeprecatedFields: ...

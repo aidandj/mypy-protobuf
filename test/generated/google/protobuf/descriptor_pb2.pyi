@@ -24,6 +24,11 @@ if sys.version_info >= (3, 10):
 else:
     from typing_extensions import TypeAlias as _TypeAlias
 
+if sys.version_info >= (3, 13):
+    from warnings import deprecated as _deprecated
+else:
+    from typing_extensions import deprecated as _deprecated
+
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class _Edition:
@@ -979,8 +984,16 @@ class FileOptions(_message.Message):
     generated to contain the file's getDescriptor() method as well as any
     top-level extensions defined in the file.
     """
-    java_generate_equals_and_hash: _builtins.bool
-    """This option does nothing."""
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def java_generate_equals_and_hash(self) -> _builtins.bool:
+        """This option does nothing."""
+
+    @java_generate_equals_and_hash.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def java_generate_equals_and_hash(self, value: _builtins.bool) -> None:
+        """This option does nothing."""
+
     java_string_check_utf8: _builtins.bool
     """A proto2 file can set this to true to opt in to UTF-8 checking for Java,
     which will throw an exception if invalid UTF-8 is parsed from the wire or
@@ -1167,18 +1180,36 @@ class MessageOptions(_message.Message):
     instead. The option should only be implicitly set by the proto compiler
     parser.
     """
-    deprecated_legacy_json_field_conflicts: _builtins.bool
-    """Enable the legacy handling of JSON field name conflicts.  This lowercases
-    and strips underscored from the fields before comparison in proto3 only.
-    The new behavior takes `json_name` into account and applies to proto2 as
-    well.
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_legacy_json_field_conflicts(self) -> _builtins.bool:
+        """Enable the legacy handling of JSON field name conflicts.  This lowercases
+        and strips underscored from the fields before comparison in proto3 only.
+        The new behavior takes `json_name` into account and applies to proto2 as
+        well.
 
-    This should only be used as a temporary measure against broken builds due
-    to the change in behavior for JSON field name conflicts.
+        This should only be used as a temporary measure against broken builds due
+        to the change in behavior for JSON field name conflicts.
 
-    TODO This is legacy behavior we plan to remove once downstream
-    teams have had time to migrate.
-    """
+        TODO This is legacy behavior we plan to remove once downstream
+        teams have had time to migrate.
+        """
+
+    @deprecated_legacy_json_field_conflicts.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_legacy_json_field_conflicts(self, value: _builtins.bool) -> None:
+        """Enable the legacy handling of JSON field name conflicts.  This lowercases
+        and strips underscored from the fields before comparison in proto3 only.
+        The new behavior takes `json_name` into account and applies to proto2 as
+        well.
+
+        This should only be used as a temporary measure against broken builds due
+        to the change in behavior for JSON field name conflicts.
+
+        TODO This is legacy behavior we plan to remove once downstream
+        teams have had time to migrate.
+        """
+
     @_builtins.property
     def features(self) -> Global___FeatureSet:
         """Any features defined in the specific edition.
@@ -1463,10 +1494,20 @@ class FieldOptions(_message.Message):
     for accessors, or it will be completely ignored; in the very least, this
     is a formalization for deprecating fields.
     """
-    weak: _builtins.bool
-    """DEPRECATED. DO NOT USE!
-    For Google-internal migration only. Do not use.
-    """
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def weak(self) -> _builtins.bool:
+        """DEPRECATED. DO NOT USE!
+        For Google-internal migration only. Do not use.
+        """
+
+    @weak.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def weak(self, value: _builtins.bool) -> None:
+        """DEPRECATED. DO NOT USE!
+        For Google-internal migration only. Do not use.
+        """
+
     debug_redact: _builtins.bool
     """Indicate that the field value should not be printed out when using debug
     formats, e.g. when the field contains sensitive credentials.
@@ -1565,14 +1606,28 @@ class EnumOptions(_message.Message):
     for the enum, or it will be completely ignored; in the very least, this
     is a formalization for deprecating enums.
     """
-    deprecated_legacy_json_field_conflicts: _builtins.bool
-    """Enable the legacy handling of JSON field name conflicts.  This lowercases
-    and strips underscored from the fields before comparison in proto3 only.
-    The new behavior takes `json_name` into account and applies to proto2 as
-    well.
-    TODO Remove this legacy behavior once downstream teams have
-    had time to migrate.
-    """
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_legacy_json_field_conflicts(self) -> _builtins.bool:
+        """Enable the legacy handling of JSON field name conflicts.  This lowercases
+        and strips underscored from the fields before comparison in proto3 only.
+        The new behavior takes `json_name` into account and applies to proto2 as
+        well.
+        TODO Remove this legacy behavior once downstream teams have
+        had time to migrate.
+        """
+
+    @deprecated_legacy_json_field_conflicts.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_legacy_json_field_conflicts(self, value: _builtins.bool) -> None:
+        """Enable the legacy handling of JSON field name conflicts.  This lowercases
+        and strips underscored from the fields before comparison in proto3 only.
+        The new behavior takes `json_name` into account and applies to proto2 as
+        well.
+        TODO Remove this legacy behavior once downstream teams have
+        had time to migrate.
+        """
+
     @_builtins.property
     def features(self) -> Global___FeatureSet:
         """Any features defined in the specific edition.

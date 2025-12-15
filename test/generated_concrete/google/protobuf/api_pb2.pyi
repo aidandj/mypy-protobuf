@@ -47,6 +47,11 @@ if sys.version_info >= (3, 10):
 else:
     from typing_extensions import TypeAlias as _TypeAlias
 
+if sys.version_info >= (3, 13):
+    from warnings import deprecated as _deprecated
+else:
+    from typing_extensions import deprecated as _deprecated
+
 DESCRIPTOR: _descriptor.FileDescriptor
 
 @_typing.final
@@ -173,18 +178,42 @@ class Method(_message.Message):
     """The URL of the output message type."""
     response_streaming: _builtins.bool
     """If true, the response is streamed."""
-    syntax: _type_pb2.Syntax.ValueType
-    """The source syntax of this method.
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def syntax(self) -> _type_pb2.Syntax.ValueType:
+        """The source syntax of this method.
 
-    This field should be ignored, instead the syntax should be inherited from
-    Api. This is similar to Field and EnumValue.
-    """
-    edition: _builtins.str
-    """The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+        This field should be ignored, instead the syntax should be inherited from
+        Api. This is similar to Field and EnumValue.
+        """
 
-    This field should be ignored, instead the edition should be inherited from
-    Api. This is similar to Field and EnumValue.
-    """
+    @syntax.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def syntax(self, value: _type_pb2.Syntax.ValueType) -> None:
+        """The source syntax of this method.
+
+        This field should be ignored, instead the syntax should be inherited from
+        Api. This is similar to Field and EnumValue.
+        """
+
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def edition(self) -> _builtins.str:
+        """The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+
+        This field should be ignored, instead the edition should be inherited from
+        Api. This is similar to Field and EnumValue.
+        """
+
+    @edition.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def edition(self, value: _builtins.str) -> None:
+        """The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+
+        This field should be ignored, instead the edition should be inherited from
+        Api. This is similar to Field and EnumValue.
+        """
+
     @_builtins.property
     def options(self) -> _containers.RepeatedCompositeFieldContainer[_type_pb2.Option]:
         """Any metadata attached to the method."""

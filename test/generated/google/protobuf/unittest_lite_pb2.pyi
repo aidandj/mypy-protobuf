@@ -23,6 +23,11 @@ if sys.version_info >= (3, 10):
 else:
     from typing_extensions import TypeAlias as _TypeAlias
 
+if sys.version_info >= (3, 13):
+    from warnings import deprecated as _deprecated
+else:
+    from typing_extensions import deprecated as _deprecated
+
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class _ForeignEnumLite:
@@ -627,10 +632,26 @@ class TestDeprecatedLite(_message.Message):
     DEPRECATED_FIELD2_FIELD_NUMBER: _builtins.int
     DEPRECATED_FIELD3_FIELD_NUMBER: _builtins.int
     DEPRECATED_FIELD4_FIELD_NUMBER: _builtins.int
-    deprecated_field: _builtins.int
-    deprecated_field2: _builtins.int
-    deprecated_field3: _builtins.str
     @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_field(self) -> _builtins.int: ...
+    @deprecated_field.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_field(self, value: _builtins.int) -> None: ...
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_field2(self) -> _builtins.int: ...
+    @deprecated_field2.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_field2(self, value: _builtins.int) -> None: ...
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_field3(self) -> _builtins.str: ...
+    @deprecated_field3.setter
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
+    def deprecated_field3(self, value: _builtins.str) -> None: ...
+    @_builtins.property
+    @_deprecated("""This field has been marked as deprecated using proto field options.""")
     def deprecated_field4(self) -> Global___TestDeprecatedLite: ...
     def __init__(
         self,
