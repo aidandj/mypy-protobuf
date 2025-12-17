@@ -27,7 +27,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _MyEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _MyEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_MyEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -40,11 +40,11 @@ class MyEnum(_MyEnum, metaclass=_MyEnumEnumTypeWrapper): ...
 FOO: MyEnum.ValueType  # 0
 BAR: MyEnum.ValueType  # 1
 BAZ: MyEnum.ValueType  # 2
-Global___MyEnum: _typing_extensions.TypeAlias = MyEnum
+Global___MyEnum: _typing_extensions.TypeAlias = MyEnum  # noqa: Y015
 
 class _MyEnumPlusExtra:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _MyEnumPlusExtraEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_MyEnumPlusExtra.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -59,7 +59,7 @@ E_FOO: MyEnumPlusExtra.ValueType  # 0
 E_BAR: MyEnumPlusExtra.ValueType  # 1
 E_BAZ: MyEnumPlusExtra.ValueType  # 2
 E_EXTRA: MyEnumPlusExtra.ValueType  # 3
-Global___MyEnumPlusExtra: _typing_extensions.TypeAlias = MyEnumPlusExtra
+Global___MyEnumPlusExtra: _typing_extensions.TypeAlias = MyEnumPlusExtra  # noqa: Y015
 
 @_typing.final
 class MyMessage(_google_protobuf_message.Message):
@@ -92,15 +92,15 @@ class MyMessage(_google_protobuf_message.Message):
         oneof_e_1: Global___MyEnum.ValueType | None = ...,
         oneof_e_2: Global___MyEnum.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_o: _typing_extensions.TypeAlias = _typing.Literal["oneof_e_1", "oneof_e_2"]
-    _WhichOneofArgType_o: _typing_extensions.TypeAlias = _typing.Literal["o", b"o"]
+    _WhichOneofReturnType_o: _typing_extensions.TypeAlias = _typing.Literal["oneof_e_1", "oneof_e_2"]  # noqa: Y015
+    _WhichOneofArgType_o: _typing_extensions.TypeAlias = _typing.Literal["o", b"o"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_o) -> _WhichOneofReturnType_o | None: ...
 
-Global___MyMessage: _typing_extensions.TypeAlias = MyMessage
+Global___MyMessage: _typing_extensions.TypeAlias = MyMessage  # noqa: Y015
 
 @_typing.final
 class MyMessagePlusExtra(_google_protobuf_message.Message):
@@ -131,12 +131,12 @@ class MyMessagePlusExtra(_google_protobuf_message.Message):
         oneof_e_1: Global___MyEnumPlusExtra.ValueType | None = ...,
         oneof_e_2: Global___MyEnumPlusExtra.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["e", b"e", "o", b"o", "oneof_e_1", b"oneof_e_1", "oneof_e_2", b"oneof_e_2", "repeated_e", b"repeated_e", "repeated_packed_e", b"repeated_packed_e", "repeated_packed_unexpected_e", b"repeated_packed_unexpected_e"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_o: _typing_extensions.TypeAlias = _typing.Literal["oneof_e_1", "oneof_e_2"]
-    _WhichOneofArgType_o: _typing_extensions.TypeAlias = _typing.Literal["o", b"o"]
+    _WhichOneofReturnType_o: _typing_extensions.TypeAlias = _typing.Literal["oneof_e_1", "oneof_e_2"]  # noqa: Y015
+    _WhichOneofArgType_o: _typing_extensions.TypeAlias = _typing.Literal["o", b"o"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_o) -> _WhichOneofReturnType_o | None: ...
 
-Global___MyMessagePlusExtra: _typing_extensions.TypeAlias = MyMessagePlusExtra
+Global___MyMessagePlusExtra: _typing_extensions.TypeAlias = MyMessagePlusExtra  # noqa: Y015

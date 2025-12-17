@@ -31,7 +31,7 @@ class TestMessageSet(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___TestMessageSet: _typing_extensions.TypeAlias = TestMessageSet
+Global___TestMessageSet: _typing_extensions.TypeAlias = TestMessageSet  # noqa: Y015
 
 @_typing.final
 class TestMessageSetWireFormatContainer(_google_protobuf_message.Message):
@@ -45,9 +45,9 @@ class TestMessageSetWireFormatContainer(_google_protobuf_message.Message):
         *,
         message_set: Global___TestMessageSet | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message_set", b"message_set"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message_set", b"message_set"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message_set", b"message_set"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message_set", b"message_set"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestMessageSetWireFormatContainer: _typing_extensions.TypeAlias = TestMessageSetWireFormatContainer
+Global___TestMessageSetWireFormatContainer: _typing_extensions.TypeAlias = TestMessageSetWireFormatContainer  # noqa: Y015

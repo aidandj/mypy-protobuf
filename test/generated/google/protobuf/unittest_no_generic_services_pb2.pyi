@@ -20,7 +20,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _TestEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _TestEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_TestEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -29,7 +29,7 @@ class _TestEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._Enum
 class TestEnum(_TestEnum, metaclass=_TestEnumEnumTypeWrapper): ...
 
 FOO: TestEnum.ValueType  # 1
-Global___TestEnum: _typing_extensions.TypeAlias = TestEnum
+Global___TestEnum: _typing_extensions.TypeAlias = TestEnum  # noqa: Y015
 
 @_typing.final
 class TestMessage(_google_protobuf_message.Message):
@@ -44,12 +44,12 @@ class TestMessage(_google_protobuf_message.Message):
         *,
         a: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestMessage: _typing_extensions.TypeAlias = TestMessage
+Global___TestMessage: _typing_extensions.TypeAlias = TestMessage  # noqa: Y015
 
 TEST_EXTENSION_FIELD_NUMBER: _builtins.int
 test_extension: _google_protobuf_internal_extension_dict._ExtensionFieldDescriptor[Global___TestMessage, _builtins.int]

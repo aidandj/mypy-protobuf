@@ -33,12 +33,12 @@ class LazyMessage(_google_protobuf_message.Message):
         *,
         a: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___LazyMessage: _typing_extensions.TypeAlias = LazyMessage
+Global___LazyMessage: _typing_extensions.TypeAlias = LazyMessage  # noqa: Y015
 
 LAZY_ENUM_OPTION_FIELD_NUMBER: _builtins.int
 lazy_enum_option: _google_protobuf_internal_extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.MessageOptions, google.protobuf.unittest_lazy_dependencies_enum_pb2.LazyEnum.ValueType]

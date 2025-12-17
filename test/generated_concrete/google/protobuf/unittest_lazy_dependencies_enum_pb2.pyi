@@ -21,7 +21,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _LazyEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _LazyEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_LazyEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -32,4 +32,4 @@ class LazyEnum(_LazyEnum, metaclass=_LazyEnumEnumTypeWrapper): ...
 
 LAZY_ENUM_0: LazyEnum.ValueType  # 0
 LAZY_ENUM_1: LazyEnum.ValueType  # 1
-Global___LazyEnum: _typing_extensions.TypeAlias = LazyEnum
+Global___LazyEnum: _typing_extensions.TypeAlias = LazyEnum  # noqa: Y015

@@ -28,7 +28,7 @@ class NoPackage(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___NoPackage: _typing_extensions.TypeAlias = NoPackage
+Global___NoPackage: _typing_extensions.TypeAlias = NoPackage  # noqa: Y015
 
 @_typing.final
 class NoPackage2(_google_protobuf_message.Message):
@@ -46,9 +46,9 @@ class NoPackage2(_google_protobuf_message.Message):
         np: Global___NoPackage | None = ...,
         np_rep: _collections_abc.Iterable[Global___NoPackage] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["np", b"np"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["np", b"np"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["np", b"np", "np_rep", b"np_rep"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["np", b"np", "np_rep", b"np_rep"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___NoPackage2: _typing_extensions.TypeAlias = NoPackage2
+Global___NoPackage2: _typing_extensions.TypeAlias = NoPackage2  # noqa: Y015

@@ -51,7 +51,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _NullValue:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _NullValueEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_NullValue.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -67,7 +67,7 @@ class NullValue(_NullValue, metaclass=_NullValueEnumTypeWrapper):
 
 NULL_VALUE: NullValue.ValueType  # 0
 """Null value."""
-Global___NullValue: _typing_extensions.TypeAlias = NullValue
+Global___NullValue: _typing_extensions.TypeAlias = NullValue  # noqa: Y015
 
 @_typing.final
 class Struct(_google_protobuf_message.Message, _google_protobuf_internal_well_known_types.Struct):
@@ -98,9 +98,9 @@ class Struct(_google_protobuf_message.Message, _google_protobuf_internal_well_kn
             key: _builtins.str = ...,
             value: Global___Value | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     FIELDS_FIELD_NUMBER: _builtins.int
@@ -113,10 +113,10 @@ class Struct(_google_protobuf_message.Message, _google_protobuf_internal_well_kn
         *,
         fields: _collections_abc.Mapping[_builtins.str, Global___Value] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["fields", b"fields"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["fields", b"fields"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Struct: _typing_extensions.TypeAlias = Struct
+Global___Struct: _typing_extensions.TypeAlias = Struct  # noqa: Y015
 
 @_typing.final
 class Value(_google_protobuf_message.Message):
@@ -162,15 +162,15 @@ class Value(_google_protobuf_message.Message):
         struct_value: Global___Struct | None = ...,
         list_value: Global___ListValue | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_value", b"bool_value", "kind", b"kind", "list_value", b"list_value", "null_value", b"null_value", "number_value", b"number_value", "string_value", b"string_value", "struct_value", b"struct_value"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_value", b"bool_value", "kind", b"kind", "list_value", b"list_value", "null_value", b"null_value", "number_value", b"number_value", "string_value", b"string_value", "struct_value", b"struct_value"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_value", b"bool_value", "kind", b"kind", "list_value", b"list_value", "null_value", b"null_value", "number_value", b"number_value", "string_value", b"string_value", "struct_value", b"struct_value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_value", b"bool_value", "kind", b"kind", "list_value", b"list_value", "null_value", b"null_value", "number_value", b"number_value", "string_value", b"string_value", "struct_value", b"struct_value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_kind: _typing_extensions.TypeAlias = _typing.Literal["null_value", "number_value", "string_value", "bool_value", "struct_value", "list_value"]
-    _WhichOneofArgType_kind: _typing_extensions.TypeAlias = _typing.Literal["kind", b"kind"]
+    _WhichOneofReturnType_kind: _typing_extensions.TypeAlias = _typing.Literal["null_value", "number_value", "string_value", "bool_value", "struct_value", "list_value"]  # noqa: Y015
+    _WhichOneofArgType_kind: _typing_extensions.TypeAlias = _typing.Literal["kind", b"kind"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_kind) -> _WhichOneofReturnType_kind | None: ...
 
-Global___Value: _typing_extensions.TypeAlias = Value
+Global___Value: _typing_extensions.TypeAlias = Value  # noqa: Y015
 
 @_typing.final
 class ListValue(_google_protobuf_message.Message, _google_protobuf_internal_well_known_types.ListValue):
@@ -191,7 +191,7 @@ class ListValue(_google_protobuf_message.Message, _google_protobuf_internal_well
         *,
         values: _collections_abc.Iterable[Global___Value] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["values", b"values"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["values", b"values"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ListValue: _typing_extensions.TypeAlias = ListValue
+Global___ListValue: _typing_extensions.TypeAlias = ListValue  # noqa: Y015

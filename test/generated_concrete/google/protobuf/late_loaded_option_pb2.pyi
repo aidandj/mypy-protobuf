@@ -31,9 +31,9 @@ class LateLoadedOption(_google_protobuf_message.Message):
         *,
         value: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___LateLoadedOption: _typing_extensions.TypeAlias = LateLoadedOption
+Global___LateLoadedOption: _typing_extensions.TypeAlias = LateLoadedOption  # noqa: Y015

@@ -31,7 +31,7 @@ class CppFeatures(_google_protobuf_message.Message):
 
     class _StringType:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _StringTypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[CppFeatures._StringType.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -64,12 +64,12 @@ class CppFeatures(_google_protobuf_message.Message):
         string_type: Global___CppFeatures.StringType.ValueType | None = ...,
         enum_name_uses_string_view: _builtins.bool | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["enum_name_uses_string_view", b"enum_name_uses_string_view", "legacy_closed_enum", b"legacy_closed_enum", "string_type", b"string_type"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["enum_name_uses_string_view", b"enum_name_uses_string_view", "legacy_closed_enum", b"legacy_closed_enum", "string_type", b"string_type"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["enum_name_uses_string_view", b"enum_name_uses_string_view", "legacy_closed_enum", b"legacy_closed_enum", "string_type", b"string_type"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["enum_name_uses_string_view", b"enum_name_uses_string_view", "legacy_closed_enum", b"legacy_closed_enum", "string_type", b"string_type"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___CppFeatures: _typing_extensions.TypeAlias = CppFeatures
+Global___CppFeatures: _typing_extensions.TypeAlias = CppFeatures  # noqa: Y015
 
 CPP_FIELD_NUMBER: _builtins.int
 cpp: _google_protobuf_internal_extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.FeatureSet, Global___CppFeatures]

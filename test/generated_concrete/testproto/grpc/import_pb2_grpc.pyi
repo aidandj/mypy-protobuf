@@ -8,8 +8,14 @@ import collections.abc as _collections_abc
 import google.protobuf.empty_pb2
 import grpc as _grpc
 import grpc.aio as _grpc_aio
+import sys
 import testproto.test_pb2
 import typing as _typing
+
+if sys.version_info >= (3, 11):
+    import typing as _typing_extensions
+else:
+    import typing_extensions as _typing_extensions
 
 _T = _typing.TypeVar("_T")
 
@@ -25,7 +31,7 @@ class SimpleServiceStub:
     """SimpleService"""
 
     @_typing.overload
-    def __new__(cls, channel: _grpc.Channel) -> SimpleServiceStub: ...
+    def __new__(cls, channel: _grpc.Channel) -> _typing_extensions.Self: ...
     @_typing.overload
     def __new__(cls, channel: _grpc_aio.Channel) -> SimpleServiceAsyncStub: ...
     UnaryUnary: _grpc.UnaryUnaryMultiCallable[google.protobuf.empty_pb2.Empty, testproto.test_pb2.Simple1]

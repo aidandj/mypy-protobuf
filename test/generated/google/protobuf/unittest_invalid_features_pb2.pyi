@@ -38,10 +38,10 @@ class TestInvalidFeatures(_google_protobuf_message.Message):
         *,
         repeated_feature: _collections_abc.Iterable[_builtins.int] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_feature", b"repeated_feature"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_feature", b"repeated_feature"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestInvalidFeatures: _typing_extensions.TypeAlias = TestInvalidFeatures
+Global___TestInvalidFeatures: _typing_extensions.TypeAlias = TestInvalidFeatures  # noqa: Y015
 
 TEST_INVALID_FIELD_NUMBER: _builtins.int
 test_invalid: _google_protobuf_internal_extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.FeatureSet, Global___TestInvalidFeatures]

@@ -29,10 +29,10 @@ class Nested(_google_protobuf_message.Message):
         *,
         a: testproto.test3_pb2.OuterEnum.ValueType = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Nested: _typing_extensions.TypeAlias = Nested
+Global___Nested: _typing_extensions.TypeAlias = Nested  # noqa: Y015
 
 @_typing.final
 class AnotherNested(_google_protobuf_message.Message):
@@ -40,7 +40,7 @@ class AnotherNested(_google_protobuf_message.Message):
 
     class _NestedEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _NestedEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[AnotherNested._NestedEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -59,7 +59,7 @@ class AnotherNested(_google_protobuf_message.Message):
 
         class _NestedEnum2:
             ValueType = _typing.NewType("ValueType", _builtins.int)
-            V: _typing_extensions.TypeAlias = ValueType
+            V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
         class _NestedEnum2EnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[AnotherNested.NestedMessage._NestedEnum2.ValueType], _builtins.type):
             DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -88,11 +88,11 @@ class AnotherNested(_google_protobuf_message.Message):
             ne: Global___AnotherNested.NestedEnum.ValueType = ...,
             ne2: Global___AnotherNested.NestedMessage.NestedEnum2.ValueType = ...,
         ) -> None: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["b", b"b", "ne", b"ne", "ne2", b"ne2", "s", b"s"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["b", b"b", "ne", b"ne", "ne2", b"ne2", "s", b"s"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     def __init__(
         self,
     ) -> None: ...
 
-Global___AnotherNested: _typing_extensions.TypeAlias = AnotherNested
+Global___AnotherNested: _typing_extensions.TypeAlias = AnotherNested  # noqa: Y015

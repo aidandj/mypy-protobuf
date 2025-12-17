@@ -24,7 +24,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _GID:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _GIDEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_GID.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -40,11 +40,11 @@ class GID(_GID, metaclass=_GIDEnumTypeWrapper):
     """
 
 GID_UNUSED: GID.ValueType  # 0
-Global___GID: _typing_extensions.TypeAlias = GID
+Global___GID: _typing_extensions.TypeAlias = GID  # noqa: Y015
 
 class _UID:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _UIDEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_UID.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -54,11 +54,11 @@ class UID(_UID, metaclass=_UIDEnumTypeWrapper):
     """This generates `UID_MAX`, which is a mcro in some circumstances."""
 
 UID_UNUSED: UID.ValueType  # 0
-Global___UID: _typing_extensions.TypeAlias = UID
+Global___UID: _typing_extensions.TypeAlias = UID  # noqa: Y015
 
 class _BadNames:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _BadNamesEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_BadNames.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -149,4 +149,4 @@ TYPE_BOOL: BadNames.ValueType  # 30
 """Sometimed defined in macOS system headers."""
 DEBUG: BadNames.ValueType  # 31
 """Defined in macOS, Windows, and Linux headers."""
-Global___BadNames: _typing_extensions.TypeAlias = BadNames
+Global___BadNames: _typing_extensions.TypeAlias = BadNames  # noqa: Y015

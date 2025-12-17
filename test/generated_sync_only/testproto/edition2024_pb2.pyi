@@ -27,12 +27,12 @@ class Editions2024SubMessage(_google_protobuf_message.Message):
         *,
         thing: _builtins.str | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["thing", b"thing"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["thing", b"thing"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["thing", b"thing"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["thing", b"thing"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Editions2024SubMessage: _typing_extensions.TypeAlias = Editions2024SubMessage
+Global___Editions2024SubMessage: _typing_extensions.TypeAlias = Editions2024SubMessage  # noqa: Y015
 
 @_typing.final
 class Editions2024Test(_google_protobuf_message.Message):
@@ -64,9 +64,9 @@ class Editions2024Test(_google_protobuf_message.Message):
         implicit_singular: _builtins.str = ...,
         default_singular: _builtins.str | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_singular", b"default_singular", "explicit_singular", b"explicit_singular", "legacy", b"legacy", "message_field", b"message_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_singular", b"default_singular", "explicit_singular", b"explicit_singular", "legacy", b"legacy", "message_field", b"message_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_singular", b"default_singular", "explicit_singular", b"explicit_singular", "implicit_singular", b"implicit_singular", "legacy", b"legacy", "message_field", b"message_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_singular", b"default_singular", "explicit_singular", b"explicit_singular", "implicit_singular", b"implicit_singular", "legacy", b"legacy", "message_field", b"message_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Editions2024Test: _typing_extensions.TypeAlias = Editions2024Test
+Global___Editions2024Test: _typing_extensions.TypeAlias = Editions2024Test  # noqa: Y015

@@ -35,12 +35,12 @@ class NestedMessage(_google_protobuf_message.Message):
         *,
         d: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___NestedMessage: _typing_extensions.TypeAlias = NestedMessage
+Global___NestedMessage: _typing_extensions.TypeAlias = NestedMessage  # noqa: Y015
 
 @_typing.final
 class ArenaMessage(_google_protobuf_message.Message):
@@ -54,9 +54,9 @@ class ArenaMessage(_google_protobuf_message.Message):
         *,
         repeated_nested_message: _collections_abc.Iterable[Global___NestedMessage] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_nested_message", b"repeated_nested_message"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_nested_message", b"repeated_nested_message"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_nested_message", b"repeated_nested_message"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_nested_message", b"repeated_nested_message"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ArenaMessage: _typing_extensions.TypeAlias = ArenaMessage
+Global___ArenaMessage: _typing_extensions.TypeAlias = ArenaMessage  # noqa: Y015

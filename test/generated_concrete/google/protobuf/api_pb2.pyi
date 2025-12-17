@@ -136,12 +136,12 @@ class Api(_google_protobuf_message.Message):
         syntax: google.protobuf.type_pb2.Syntax.ValueType = ...,
         edition: _builtins.str = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["source_context", b"source_context"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["source_context", b"source_context"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "methods", b"methods", "mixins", b"mixins", "name", b"name", "options", b"options", "source_context", b"source_context", "syntax", b"syntax", "version", b"version"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "methods", b"methods", "mixins", b"mixins", "name", b"name", "options", b"options", "source_context", b"source_context", "syntax", b"syntax", "version", b"version"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Api: _typing_extensions.TypeAlias = Api
+Global___Api: _typing_extensions.TypeAlias = Api  # noqa: Y015
 
 @_typing.final
 class Method(_google_protobuf_message.Message):
@@ -201,10 +201,10 @@ class Method(_google_protobuf_message.Message):
         syntax: google.protobuf.type_pb2.Syntax.ValueType = ...,
         edition: _builtins.str = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "name", b"name", "options", b"options", "request_streaming", b"request_streaming", "request_type_url", b"request_type_url", "response_streaming", b"response_streaming", "response_type_url", b"response_type_url", "syntax", b"syntax"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "name", b"name", "options", b"options", "request_streaming", b"request_streaming", "request_type_url", b"request_type_url", "response_streaming", b"response_streaming", "response_type_url", b"response_type_url", "syntax", b"syntax"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Method: _typing_extensions.TypeAlias = Method
+Global___Method: _typing_extensions.TypeAlias = Method  # noqa: Y015
 
 @_typing.final
 class Mixin(_google_protobuf_message.Message):
@@ -304,7 +304,7 @@ class Mixin(_google_protobuf_message.Message):
         name: _builtins.str = ...,
         root: _builtins.str = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "root", b"root"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "root", b"root"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Mixin: _typing_extensions.TypeAlias = Mixin
+Global___Mixin: _typing_extensions.TypeAlias = Mixin  # noqa: Y015

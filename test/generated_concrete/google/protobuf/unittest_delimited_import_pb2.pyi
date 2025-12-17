@@ -30,9 +30,9 @@ class MessageImport(_google_protobuf_message.Message):
         a: _builtins.int | None = ...,
         b: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___MessageImport: _typing_extensions.TypeAlias = MessageImport
+Global___MessageImport: _typing_extensions.TypeAlias = MessageImport  # noqa: Y015

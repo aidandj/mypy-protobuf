@@ -28,7 +28,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _Edition:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _EditionEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_Edition.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -104,11 +104,11 @@ EDITION_MAX: Edition.ValueType  # 2147483647
 ever be used by plugins that can expect to never require any changes to
 support a new edition.
 """
-Global___Edition: _typing_extensions.TypeAlias = Edition
+Global___Edition: _typing_extensions.TypeAlias = Edition  # noqa: Y015
 
 class _SymbolVisibility:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _SymbolVisibilityEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_SymbolVisibility.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -127,7 +127,7 @@ class SymbolVisibility(_SymbolVisibility, metaclass=_SymbolVisibilityEnumTypeWra
 VISIBILITY_UNSET: SymbolVisibility.ValueType  # 0
 VISIBILITY_LOCAL: SymbolVisibility.ValueType  # 1
 VISIBILITY_EXPORT: SymbolVisibility.ValueType  # 2
-Global___SymbolVisibility: _typing_extensions.TypeAlias = SymbolVisibility
+Global___SymbolVisibility: _typing_extensions.TypeAlias = SymbolVisibility  # noqa: Y015
 
 @_typing.final
 class FileDescriptorSet(_google_protobuf_message.Message):
@@ -145,10 +145,10 @@ class FileDescriptorSet(_google_protobuf_message.Message):
         *,
         file: _collections_abc.Iterable[Global___FileDescriptorProto] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["file", b"file"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["file", b"file"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FileDescriptorSet: _typing_extensions.TypeAlias = FileDescriptorSet
+Global___FileDescriptorSet: _typing_extensions.TypeAlias = FileDescriptorSet  # noqa: Y015
 
 @_typing.final
 class FileDescriptorProto(_google_protobuf_message.Message):
@@ -247,12 +247,12 @@ class FileDescriptorProto(_google_protobuf_message.Message):
         syntax: _builtins.str | None = ...,
         edition: Global___Edition.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "name", b"name", "options", b"options", "package", b"package", "source_code_info", b"source_code_info", "syntax", b"syntax"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "name", b"name", "options", b"options", "package", b"package", "source_code_info", b"source_code_info", "syntax", b"syntax"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["dependency", b"dependency", "edition", b"edition", "enum_type", b"enum_type", "extension", b"extension", "message_type", b"message_type", "name", b"name", "option_dependency", b"option_dependency", "options", b"options", "package", b"package", "public_dependency", b"public_dependency", "service", b"service", "source_code_info", b"source_code_info", "syntax", b"syntax", "weak_dependency", b"weak_dependency"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["dependency", b"dependency", "edition", b"edition", "enum_type", b"enum_type", "extension", b"extension", "message_type", b"message_type", "name", b"name", "option_dependency", b"option_dependency", "options", b"options", "package", b"package", "public_dependency", b"public_dependency", "service", b"service", "source_code_info", b"source_code_info", "syntax", b"syntax", "weak_dependency", b"weak_dependency"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FileDescriptorProto: _typing_extensions.TypeAlias = FileDescriptorProto
+Global___FileDescriptorProto: _typing_extensions.TypeAlias = FileDescriptorProto  # noqa: Y015
 
 @_typing.final
 class DescriptorProto(_google_protobuf_message.Message):
@@ -280,9 +280,9 @@ class DescriptorProto(_google_protobuf_message.Message):
             end: _builtins.int | None = ...,
             options: Global___ExtensionRangeOptions | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "options", b"options", "start", b"start"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "options", b"options", "start", b"start"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "options", b"options", "start", b"start"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "options", b"options", "start", b"start"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -306,9 +306,9 @@ class DescriptorProto(_google_protobuf_message.Message):
             start: _builtins.int | None = ...,
             end: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     NAME_FIELD_NUMBER: _builtins.int
@@ -362,12 +362,12 @@ class DescriptorProto(_google_protobuf_message.Message):
         reserved_name: _collections_abc.Iterable[_builtins.str] | None = ...,
         visibility: Global___SymbolVisibility.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options", "visibility", b"visibility"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options", "visibility", b"visibility"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["enum_type", b"enum_type", "extension", b"extension", "extension_range", b"extension_range", "field", b"field", "name", b"name", "nested_type", b"nested_type", "oneof_decl", b"oneof_decl", "options", b"options", "reserved_name", b"reserved_name", "reserved_range", b"reserved_range", "visibility", b"visibility"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["enum_type", b"enum_type", "extension", b"extension", "extension_range", b"extension_range", "field", b"field", "name", b"name", "nested_type", b"nested_type", "oneof_decl", b"oneof_decl", "options", b"options", "reserved_name", b"reserved_name", "reserved_range", b"reserved_range", "visibility", b"visibility"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___DescriptorProto: _typing_extensions.TypeAlias = DescriptorProto
+Global___DescriptorProto: _typing_extensions.TypeAlias = DescriptorProto  # noqa: Y015
 
 @_typing.final
 class ExtensionRangeOptions(_google_protobuf_message.Message):
@@ -375,7 +375,7 @@ class ExtensionRangeOptions(_google_protobuf_message.Message):
 
     class _VerificationState:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _VerificationStateEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[ExtensionRangeOptions._VerificationState.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -428,9 +428,9 @@ class ExtensionRangeOptions(_google_protobuf_message.Message):
             reserved: _builtins.bool | None = ...,
             repeated: _builtins.bool | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["full_name", b"full_name", "number", b"number", "repeated", b"repeated", "reserved", b"reserved", "type", b"type"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["full_name", b"full_name", "number", b"number", "repeated", b"repeated", "reserved", b"reserved", "type", b"type"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["full_name", b"full_name", "number", b"number", "repeated", b"repeated", "reserved", b"reserved", "type", b"type"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["full_name", b"full_name", "number", b"number", "repeated", b"repeated", "reserved", b"reserved", "type", b"type"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     UNINTERPRETED_OPTION_FIELD_NUMBER: _builtins.int
@@ -465,12 +465,12 @@ class ExtensionRangeOptions(_google_protobuf_message.Message):
         features: Global___FeatureSet | None = ...,
         verification: Global___ExtensionRangeOptions.VerificationState.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["features", b"features", "verification", b"verification"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["features", b"features", "verification", b"verification"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["declaration", b"declaration", "features", b"features", "uninterpreted_option", b"uninterpreted_option", "verification", b"verification"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["declaration", b"declaration", "features", b"features", "uninterpreted_option", b"uninterpreted_option", "verification", b"verification"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ExtensionRangeOptions: _typing_extensions.TypeAlias = ExtensionRangeOptions
+Global___ExtensionRangeOptions: _typing_extensions.TypeAlias = ExtensionRangeOptions  # noqa: Y015
 
 @_typing.final
 class FieldDescriptorProto(_google_protobuf_message.Message):
@@ -480,7 +480,7 @@ class FieldDescriptorProto(_google_protobuf_message.Message):
 
     class _Type:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _TypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FieldDescriptorProto._Type.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -563,7 +563,7 @@ class FieldDescriptorProto(_google_protobuf_message.Message):
 
     class _Label:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _LabelEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FieldDescriptorProto._Label.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -671,12 +671,12 @@ class FieldDescriptorProto(_google_protobuf_message.Message):
         options: Global___FieldOptions | None = ...,
         proto3_optional: _builtins.bool | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_value", b"default_value", "extendee", b"extendee", "json_name", b"json_name", "label", b"label", "name", b"name", "number", b"number", "oneof_index", b"oneof_index", "options", b"options", "proto3_optional", b"proto3_optional", "type", b"type", "type_name", b"type_name"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_value", b"default_value", "extendee", b"extendee", "json_name", b"json_name", "label", b"label", "name", b"name", "number", b"number", "oneof_index", b"oneof_index", "options", b"options", "proto3_optional", b"proto3_optional", "type", b"type", "type_name", b"type_name"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_value", b"default_value", "extendee", b"extendee", "json_name", b"json_name", "label", b"label", "name", b"name", "number", b"number", "oneof_index", b"oneof_index", "options", b"options", "proto3_optional", b"proto3_optional", "type", b"type", "type_name", b"type_name"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_value", b"default_value", "extendee", b"extendee", "json_name", b"json_name", "label", b"label", "name", b"name", "number", b"number", "oneof_index", b"oneof_index", "options", b"options", "proto3_optional", b"proto3_optional", "type", b"type", "type_name", b"type_name"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FieldDescriptorProto: _typing_extensions.TypeAlias = FieldDescriptorProto
+Global___FieldDescriptorProto: _typing_extensions.TypeAlias = FieldDescriptorProto  # noqa: Y015
 
 @_typing.final
 class OneofDescriptorProto(_google_protobuf_message.Message):
@@ -695,12 +695,12 @@ class OneofDescriptorProto(_google_protobuf_message.Message):
         name: _builtins.str | None = ...,
         options: Global___OneofOptions | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___OneofDescriptorProto: _typing_extensions.TypeAlias = OneofDescriptorProto
+Global___OneofDescriptorProto: _typing_extensions.TypeAlias = OneofDescriptorProto  # noqa: Y015
 
 @_typing.final
 class EnumDescriptorProto(_google_protobuf_message.Message):
@@ -732,9 +732,9 @@ class EnumDescriptorProto(_google_protobuf_message.Message):
             start: _builtins.int | None = ...,
             end: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["end", b"end", "start", b"start"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     NAME_FIELD_NUMBER: _builtins.int
@@ -773,12 +773,12 @@ class EnumDescriptorProto(_google_protobuf_message.Message):
         reserved_name: _collections_abc.Iterable[_builtins.str] | None = ...,
         visibility: Global___SymbolVisibility.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options", "visibility", b"visibility"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options", "visibility", b"visibility"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options", "reserved_name", b"reserved_name", "reserved_range", b"reserved_range", "value", b"value", "visibility", b"visibility"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options", "reserved_name", b"reserved_name", "reserved_range", b"reserved_range", "value", b"value", "visibility", b"visibility"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___EnumDescriptorProto: _typing_extensions.TypeAlias = EnumDescriptorProto
+Global___EnumDescriptorProto: _typing_extensions.TypeAlias = EnumDescriptorProto  # noqa: Y015
 
 @_typing.final
 class EnumValueDescriptorProto(_google_protobuf_message.Message):
@@ -800,12 +800,12 @@ class EnumValueDescriptorProto(_google_protobuf_message.Message):
         number: _builtins.int | None = ...,
         options: Global___EnumValueOptions | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "number", b"number", "options", b"options"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "number", b"number", "options", b"options"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "number", b"number", "options", b"options"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "number", b"number", "options", b"options"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___EnumValueDescriptorProto: _typing_extensions.TypeAlias = EnumValueDescriptorProto
+Global___EnumValueDescriptorProto: _typing_extensions.TypeAlias = EnumValueDescriptorProto  # noqa: Y015
 
 @_typing.final
 class ServiceDescriptorProto(_google_protobuf_message.Message):
@@ -828,12 +828,12 @@ class ServiceDescriptorProto(_google_protobuf_message.Message):
         method: _collections_abc.Iterable[Global___MethodDescriptorProto] | None = ...,
         options: Global___ServiceOptions | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["name", b"name", "options", b"options"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["method", b"method", "name", b"name", "options", b"options"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["method", b"method", "name", b"name", "options", b"options"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ServiceDescriptorProto: _typing_extensions.TypeAlias = ServiceDescriptorProto
+Global___ServiceDescriptorProto: _typing_extensions.TypeAlias = ServiceDescriptorProto  # noqa: Y015
 
 @_typing.final
 class MethodDescriptorProto(_google_protobuf_message.Message):
@@ -869,12 +869,12 @@ class MethodDescriptorProto(_google_protobuf_message.Message):
         client_streaming: _builtins.bool | None = ...,
         server_streaming: _builtins.bool | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["client_streaming", b"client_streaming", "input_type", b"input_type", "name", b"name", "options", b"options", "output_type", b"output_type", "server_streaming", b"server_streaming"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["client_streaming", b"client_streaming", "input_type", b"input_type", "name", b"name", "options", b"options", "output_type", b"output_type", "server_streaming", b"server_streaming"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["client_streaming", b"client_streaming", "input_type", b"input_type", "name", b"name", "options", b"options", "output_type", b"output_type", "server_streaming", b"server_streaming"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["client_streaming", b"client_streaming", "input_type", b"input_type", "name", b"name", "options", b"options", "output_type", b"output_type", "server_streaming", b"server_streaming"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___MethodDescriptorProto: _typing_extensions.TypeAlias = MethodDescriptorProto
+Global___MethodDescriptorProto: _typing_extensions.TypeAlias = MethodDescriptorProto  # noqa: Y015
 
 @_typing.final
 class FileOptions(_google_protobuf_message.Message):
@@ -912,7 +912,7 @@ class FileOptions(_google_protobuf_message.Message):
 
     class _OptimizeMode:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _OptimizeModeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FileOptions._OptimizeMode.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1095,12 +1095,12 @@ class FileOptions(_google_protobuf_message.Message):
         features: Global___FeatureSet | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cc_enable_arenas", b"cc_enable_arenas", "cc_generic_services", b"cc_generic_services", "csharp_namespace", b"csharp_namespace", "deprecated", b"deprecated", "features", b"features", "go_package", b"go_package", "java_generate_equals_and_hash", b"java_generate_equals_and_hash", "java_generic_services", b"java_generic_services", "java_multiple_files", b"java_multiple_files", "java_outer_classname", b"java_outer_classname", "java_package", b"java_package", "java_string_check_utf8", b"java_string_check_utf8", "objc_class_prefix", b"objc_class_prefix", "optimize_for", b"optimize_for", "php_class_prefix", b"php_class_prefix", "php_metadata_namespace", b"php_metadata_namespace", "php_namespace", b"php_namespace", "py_generic_services", b"py_generic_services", "ruby_package", b"ruby_package", "swift_prefix", b"swift_prefix"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cc_enable_arenas", b"cc_enable_arenas", "cc_generic_services", b"cc_generic_services", "csharp_namespace", b"csharp_namespace", "deprecated", b"deprecated", "features", b"features", "go_package", b"go_package", "java_generate_equals_and_hash", b"java_generate_equals_and_hash", "java_generic_services", b"java_generic_services", "java_multiple_files", b"java_multiple_files", "java_outer_classname", b"java_outer_classname", "java_package", b"java_package", "java_string_check_utf8", b"java_string_check_utf8", "objc_class_prefix", b"objc_class_prefix", "optimize_for", b"optimize_for", "php_class_prefix", b"php_class_prefix", "php_metadata_namespace", b"php_metadata_namespace", "php_namespace", b"php_namespace", "py_generic_services", b"py_generic_services", "ruby_package", b"ruby_package", "swift_prefix", b"swift_prefix"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cc_enable_arenas", b"cc_enable_arenas", "cc_generic_services", b"cc_generic_services", "csharp_namespace", b"csharp_namespace", "deprecated", b"deprecated", "features", b"features", "go_package", b"go_package", "java_generate_equals_and_hash", b"java_generate_equals_and_hash", "java_generic_services", b"java_generic_services", "java_multiple_files", b"java_multiple_files", "java_outer_classname", b"java_outer_classname", "java_package", b"java_package", "java_string_check_utf8", b"java_string_check_utf8", "objc_class_prefix", b"objc_class_prefix", "optimize_for", b"optimize_for", "php_class_prefix", b"php_class_prefix", "php_metadata_namespace", b"php_metadata_namespace", "php_namespace", b"php_namespace", "py_generic_services", b"py_generic_services", "ruby_package", b"ruby_package", "swift_prefix", b"swift_prefix", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cc_enable_arenas", b"cc_enable_arenas", "cc_generic_services", b"cc_generic_services", "csharp_namespace", b"csharp_namespace", "deprecated", b"deprecated", "features", b"features", "go_package", b"go_package", "java_generate_equals_and_hash", b"java_generate_equals_and_hash", "java_generic_services", b"java_generic_services", "java_multiple_files", b"java_multiple_files", "java_outer_classname", b"java_outer_classname", "java_package", b"java_package", "java_string_check_utf8", b"java_string_check_utf8", "objc_class_prefix", b"objc_class_prefix", "optimize_for", b"optimize_for", "php_class_prefix", b"php_class_prefix", "php_metadata_namespace", b"php_metadata_namespace", "php_namespace", b"php_namespace", "py_generic_services", b"py_generic_services", "ruby_package", b"ruby_package", "swift_prefix", b"swift_prefix", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FileOptions: _typing_extensions.TypeAlias = FileOptions
+Global___FileOptions: _typing_extensions.TypeAlias = FileOptions  # noqa: Y015
 
 @_typing.final
 class MessageOptions(_google_protobuf_message.Message):
@@ -1202,12 +1202,12 @@ class MessageOptions(_google_protobuf_message.Message):
         features: Global___FeatureSet | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features", "map_entry", b"map_entry", "message_set_wire_format", b"message_set_wire_format", "no_standard_descriptor_accessor", b"no_standard_descriptor_accessor"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features", "map_entry", b"map_entry", "message_set_wire_format", b"message_set_wire_format", "no_standard_descriptor_accessor", b"no_standard_descriptor_accessor"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features", "map_entry", b"map_entry", "message_set_wire_format", b"message_set_wire_format", "no_standard_descriptor_accessor", b"no_standard_descriptor_accessor", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features", "map_entry", b"map_entry", "message_set_wire_format", b"message_set_wire_format", "no_standard_descriptor_accessor", b"no_standard_descriptor_accessor", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___MessageOptions: _typing_extensions.TypeAlias = MessageOptions
+Global___MessageOptions: _typing_extensions.TypeAlias = MessageOptions  # noqa: Y015
 
 @_typing.final
 class FieldOptions(_google_protobuf_message.Message):
@@ -1215,7 +1215,7 @@ class FieldOptions(_google_protobuf_message.Message):
 
     class _CType:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _CTypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FieldOptions._CType.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1246,7 +1246,7 @@ class FieldOptions(_google_protobuf_message.Message):
 
     class _JSType:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _JSTypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FieldOptions._JSType.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1267,7 +1267,7 @@ class FieldOptions(_google_protobuf_message.Message):
 
     class _OptionRetention:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _OptionRetentionEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FieldOptions._OptionRetention.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1284,7 +1284,7 @@ class FieldOptions(_google_protobuf_message.Message):
 
     class _OptionTargetType:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _OptionTargetTypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FieldOptions._OptionTargetType.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1331,9 +1331,9 @@ class FieldOptions(_google_protobuf_message.Message):
             edition: Global___Edition.ValueType | None = ...,
             value: _builtins.str | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -1378,9 +1378,9 @@ class FieldOptions(_google_protobuf_message.Message):
             edition_removed: Global___Edition.ValueType | None = ...,
             removal_error: _builtins.str | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecation_warning", b"deprecation_warning", "edition_deprecated", b"edition_deprecated", "edition_introduced", b"edition_introduced", "edition_removed", b"edition_removed", "removal_error", b"removal_error"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecation_warning", b"deprecation_warning", "edition_deprecated", b"edition_deprecated", "edition_introduced", b"edition_introduced", "edition_removed", b"edition_removed", "removal_error", b"removal_error"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecation_warning", b"deprecation_warning", "edition_deprecated", b"edition_deprecated", "edition_introduced", b"edition_introduced", "edition_removed", b"edition_removed", "removal_error", b"removal_error"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecation_warning", b"deprecation_warning", "edition_deprecated", b"edition_deprecated", "edition_introduced", b"edition_introduced", "edition_removed", b"edition_removed", "removal_error", b"removal_error"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     CTYPE_FIELD_NUMBER: _builtins.int
@@ -1508,12 +1508,12 @@ class FieldOptions(_google_protobuf_message.Message):
         feature_support: Global___FieldOptions.FeatureSupport | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["ctype", b"ctype", "debug_redact", b"debug_redact", "deprecated", b"deprecated", "feature_support", b"feature_support", "features", b"features", "jstype", b"jstype", "lazy", b"lazy", "packed", b"packed", "retention", b"retention", "unverified_lazy", b"unverified_lazy", "weak", b"weak"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["ctype", b"ctype", "debug_redact", b"debug_redact", "deprecated", b"deprecated", "feature_support", b"feature_support", "features", b"features", "jstype", b"jstype", "lazy", b"lazy", "packed", b"packed", "retention", b"retention", "unverified_lazy", b"unverified_lazy", "weak", b"weak"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["ctype", b"ctype", "debug_redact", b"debug_redact", "deprecated", b"deprecated", "edition_defaults", b"edition_defaults", "feature_support", b"feature_support", "features", b"features", "jstype", b"jstype", "lazy", b"lazy", "packed", b"packed", "retention", b"retention", "targets", b"targets", "uninterpreted_option", b"uninterpreted_option", "unverified_lazy", b"unverified_lazy", "weak", b"weak"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["ctype", b"ctype", "debug_redact", b"debug_redact", "deprecated", b"deprecated", "edition_defaults", b"edition_defaults", "feature_support", b"feature_support", "features", b"features", "jstype", b"jstype", "lazy", b"lazy", "packed", b"packed", "retention", b"retention", "targets", b"targets", "uninterpreted_option", b"uninterpreted_option", "unverified_lazy", b"unverified_lazy", "weak", b"weak"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FieldOptions: _typing_extensions.TypeAlias = FieldOptions
+Global___FieldOptions: _typing_extensions.TypeAlias = FieldOptions  # noqa: Y015
 
 @_typing.final
 class OneofOptions(_google_protobuf_message.Message):
@@ -1539,12 +1539,12 @@ class OneofOptions(_google_protobuf_message.Message):
         features: Global___FeatureSet | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["features", b"features"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["features", b"features"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["features", b"features", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["features", b"features", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___OneofOptions: _typing_extensions.TypeAlias = OneofOptions
+Global___OneofOptions: _typing_extensions.TypeAlias = OneofOptions  # noqa: Y015
 
 @_typing.final
 class EnumOptions(_google_protobuf_message.Message):
@@ -1594,12 +1594,12 @@ class EnumOptions(_google_protobuf_message.Message):
         features: Global___FeatureSet | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["allow_alias", b"allow_alias", "deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["allow_alias", b"allow_alias", "deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["allow_alias", b"allow_alias", "deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["allow_alias", b"allow_alias", "deprecated", b"deprecated", "deprecated_legacy_json_field_conflicts", b"deprecated_legacy_json_field_conflicts", "features", b"features", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___EnumOptions: _typing_extensions.TypeAlias = EnumOptions
+Global___EnumOptions: _typing_extensions.TypeAlias = EnumOptions  # noqa: Y015
 
 @_typing.final
 class EnumValueOptions(_google_protobuf_message.Message):
@@ -1646,12 +1646,12 @@ class EnumValueOptions(_google_protobuf_message.Message):
         feature_support: Global___FieldOptions.FeatureSupport | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["debug_redact", b"debug_redact", "deprecated", b"deprecated", "feature_support", b"feature_support", "features", b"features"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["debug_redact", b"debug_redact", "deprecated", b"deprecated", "feature_support", b"feature_support", "features", b"features"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["debug_redact", b"debug_redact", "deprecated", b"deprecated", "feature_support", b"feature_support", "features", b"features", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["debug_redact", b"debug_redact", "deprecated", b"deprecated", "feature_support", b"feature_support", "features", b"features", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___EnumValueOptions: _typing_extensions.TypeAlias = EnumValueOptions
+Global___EnumValueOptions: _typing_extensions.TypeAlias = EnumValueOptions  # noqa: Y015
 
 @_typing.final
 class ServiceOptions(_google_protobuf_message.Message):
@@ -1690,12 +1690,12 @@ class ServiceOptions(_google_protobuf_message.Message):
         deprecated: _builtins.bool | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ServiceOptions: _typing_extensions.TypeAlias = ServiceOptions
+Global___ServiceOptions: _typing_extensions.TypeAlias = ServiceOptions  # noqa: Y015
 
 @_typing.final
 class MethodOptions(_google_protobuf_message.Message):
@@ -1703,7 +1703,7 @@ class MethodOptions(_google_protobuf_message.Message):
 
     class _IdempotencyLevel:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _IdempotencyLevelEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[MethodOptions._IdempotencyLevel.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1761,12 +1761,12 @@ class MethodOptions(_google_protobuf_message.Message):
         features: Global___FeatureSet | None = ...,
         uninterpreted_option: _collections_abc.Iterable[Global___UninterpretedOption] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features", "idempotency_level", b"idempotency_level"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features", "idempotency_level", b"idempotency_level"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features", "idempotency_level", b"idempotency_level", "uninterpreted_option", b"uninterpreted_option"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["deprecated", b"deprecated", "features", b"features", "idempotency_level", b"idempotency_level", "uninterpreted_option", b"uninterpreted_option"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___MethodOptions: _typing_extensions.TypeAlias = MethodOptions
+Global___MethodOptions: _typing_extensions.TypeAlias = MethodOptions  # noqa: Y015
 
 @_typing.final
 class UninterpretedOption(_google_protobuf_message.Message):
@@ -1801,9 +1801,9 @@ class UninterpretedOption(_google_protobuf_message.Message):
             name_part: _builtins.str | None = ...,
             is_extension: _builtins.bool | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["is_extension", b"is_extension", "name_part", b"name_part"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["is_extension", b"is_extension", "name_part", b"name_part"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["is_extension", b"is_extension", "name_part", b"name_part"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["is_extension", b"is_extension", "name_part", b"name_part"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     NAME_FIELD_NUMBER: _builtins.int
@@ -1835,12 +1835,12 @@ class UninterpretedOption(_google_protobuf_message.Message):
         string_value: _builtins.bytes | None = ...,
         aggregate_value: _builtins.str | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["aggregate_value", b"aggregate_value", "double_value", b"double_value", "identifier_value", b"identifier_value", "negative_int_value", b"negative_int_value", "positive_int_value", b"positive_int_value", "string_value", b"string_value"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["aggregate_value", b"aggregate_value", "double_value", b"double_value", "identifier_value", b"identifier_value", "negative_int_value", b"negative_int_value", "positive_int_value", b"positive_int_value", "string_value", b"string_value"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["aggregate_value", b"aggregate_value", "double_value", b"double_value", "identifier_value", b"identifier_value", "name", b"name", "negative_int_value", b"negative_int_value", "positive_int_value", b"positive_int_value", "string_value", b"string_value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["aggregate_value", b"aggregate_value", "double_value", b"double_value", "identifier_value", b"identifier_value", "name", b"name", "negative_int_value", b"negative_int_value", "positive_int_value", b"positive_int_value", "string_value", b"string_value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___UninterpretedOption: _typing_extensions.TypeAlias = UninterpretedOption
+Global___UninterpretedOption: _typing_extensions.TypeAlias = UninterpretedOption  # noqa: Y015
 
 @_typing.final
 class FeatureSet(_google_protobuf_message.Message):
@@ -1859,7 +1859,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _FieldPresence:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _FieldPresenceEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._FieldPresence.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1876,7 +1876,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _EnumType:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _EnumTypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._EnumType.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1891,7 +1891,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _RepeatedFieldEncoding:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _RepeatedFieldEncodingEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._RepeatedFieldEncoding.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1906,7 +1906,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _Utf8Validation:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _Utf8ValidationEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._Utf8Validation.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1921,7 +1921,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _MessageEncoding:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _MessageEncodingEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._MessageEncoding.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1936,7 +1936,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _JsonFormat:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _JsonFormatEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._JsonFormat.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1951,7 +1951,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
     class _EnforceNamingStyle:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _EnforceNamingStyleEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet._EnforceNamingStyle.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -1970,7 +1970,7 @@ class FeatureSet(_google_protobuf_message.Message):
 
         class _DefaultSymbolVisibility:
             ValueType = _typing.NewType("ValueType", _builtins.int)
-            V: _typing_extensions.TypeAlias = ValueType
+            V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
         class _DefaultSymbolVisibilityEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[FeatureSet.VisibilityFeature._DefaultSymbolVisibility.ValueType], _builtins.type):
             DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -2033,12 +2033,12 @@ class FeatureSet(_google_protobuf_message.Message):
         enforce_naming_style: Global___FeatureSet.EnforceNamingStyle.ValueType | None = ...,
         default_symbol_visibility: Global___FeatureSet.VisibilityFeature.DefaultSymbolVisibility.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_symbol_visibility", b"default_symbol_visibility", "enforce_naming_style", b"enforce_naming_style", "enum_type", b"enum_type", "field_presence", b"field_presence", "json_format", b"json_format", "message_encoding", b"message_encoding", "repeated_field_encoding", b"repeated_field_encoding", "utf8_validation", b"utf8_validation"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_symbol_visibility", b"default_symbol_visibility", "enforce_naming_style", b"enforce_naming_style", "enum_type", b"enum_type", "field_presence", b"field_presence", "json_format", b"json_format", "message_encoding", b"message_encoding", "repeated_field_encoding", b"repeated_field_encoding", "utf8_validation", b"utf8_validation"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_symbol_visibility", b"default_symbol_visibility", "enforce_naming_style", b"enforce_naming_style", "enum_type", b"enum_type", "field_presence", b"field_presence", "json_format", b"json_format", "message_encoding", b"message_encoding", "repeated_field_encoding", b"repeated_field_encoding", "utf8_validation", b"utf8_validation"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["default_symbol_visibility", b"default_symbol_visibility", "enforce_naming_style", b"enforce_naming_style", "enum_type", b"enum_type", "field_presence", b"field_presence", "json_format", b"json_format", "message_encoding", b"message_encoding", "repeated_field_encoding", b"repeated_field_encoding", "utf8_validation", b"utf8_validation"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FeatureSet: _typing_extensions.TypeAlias = FeatureSet
+Global___FeatureSet: _typing_extensions.TypeAlias = FeatureSet  # noqa: Y015
 
 @_typing.final
 class FeatureSetDefaults(_google_protobuf_message.Message):
@@ -2079,9 +2079,9 @@ class FeatureSetDefaults(_google_protobuf_message.Message):
             overridable_features: Global___FeatureSet | None = ...,
             fixed_features: Global___FeatureSet | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "fixed_features", b"fixed_features", "overridable_features", b"overridable_features"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "fixed_features", b"fixed_features", "overridable_features", b"overridable_features"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "fixed_features", b"fixed_features", "overridable_features", b"overridable_features"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["edition", b"edition", "fixed_features", b"fixed_features", "overridable_features", b"overridable_features"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     DEFAULTS_FIELD_NUMBER: _builtins.int
@@ -2104,12 +2104,12 @@ class FeatureSetDefaults(_google_protobuf_message.Message):
         minimum_edition: Global___Edition.ValueType | None = ...,
         maximum_edition: Global___Edition.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["maximum_edition", b"maximum_edition", "minimum_edition", b"minimum_edition"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["maximum_edition", b"maximum_edition", "minimum_edition", b"minimum_edition"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["defaults", b"defaults", "maximum_edition", b"maximum_edition", "minimum_edition", b"minimum_edition"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["defaults", b"defaults", "maximum_edition", b"maximum_edition", "minimum_edition", b"minimum_edition"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FeatureSetDefaults: _typing_extensions.TypeAlias = FeatureSetDefaults
+Global___FeatureSetDefaults: _typing_extensions.TypeAlias = FeatureSetDefaults  # noqa: Y015
 
 @_typing.final
 class SourceCodeInfo(_google_protobuf_message.Message):
@@ -2228,9 +2228,9 @@ class SourceCodeInfo(_google_protobuf_message.Message):
             trailing_comments: _builtins.str | None = ...,
             leading_detached_comments: _collections_abc.Iterable[_builtins.str] | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["leading_comments", b"leading_comments", "trailing_comments", b"trailing_comments"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["leading_comments", b"leading_comments", "trailing_comments", b"trailing_comments"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["leading_comments", b"leading_comments", "leading_detached_comments", b"leading_detached_comments", "path", b"path", "span", b"span", "trailing_comments", b"trailing_comments"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["leading_comments", b"leading_comments", "leading_detached_comments", b"leading_detached_comments", "path", b"path", "span", b"span", "trailing_comments", b"trailing_comments"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     LOCATION_FIELD_NUMBER: _builtins.int
@@ -2286,10 +2286,10 @@ class SourceCodeInfo(_google_protobuf_message.Message):
         *,
         location: _collections_abc.Iterable[Global___SourceCodeInfo.Location] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["location", b"location"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["location", b"location"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___SourceCodeInfo: _typing_extensions.TypeAlias = SourceCodeInfo
+Global___SourceCodeInfo: _typing_extensions.TypeAlias = SourceCodeInfo  # noqa: Y015
 
 @_typing.final
 class GeneratedCodeInfo(_google_protobuf_message.Message):
@@ -2306,7 +2306,7 @@ class GeneratedCodeInfo(_google_protobuf_message.Message):
 
         class _Semantic:
             ValueType = _typing.NewType("ValueType", _builtins.int)
-            V: _typing_extensions.TypeAlias = ValueType
+            V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
         class _SemanticEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[GeneratedCodeInfo.Annotation._Semantic.ValueType], _builtins.type):
             DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -2361,9 +2361,9 @@ class GeneratedCodeInfo(_google_protobuf_message.Message):
             end: _builtins.int | None = ...,
             semantic: Global___GeneratedCodeInfo.Annotation.Semantic.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["begin", b"begin", "end", b"end", "semantic", b"semantic", "source_file", b"source_file"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["begin", b"begin", "end", b"end", "semantic", b"semantic", "source_file", b"source_file"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["begin", b"begin", "end", b"end", "path", b"path", "semantic", b"semantic", "source_file", b"source_file"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["begin", b"begin", "end", b"end", "path", b"path", "semantic", b"semantic", "source_file", b"source_file"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     ANNOTATION_FIELD_NUMBER: _builtins.int
@@ -2378,7 +2378,7 @@ class GeneratedCodeInfo(_google_protobuf_message.Message):
         *,
         annotation: _collections_abc.Iterable[Global___GeneratedCodeInfo.Annotation] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["annotation", b"annotation"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["annotation", b"annotation"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___GeneratedCodeInfo: _typing_extensions.TypeAlias = GeneratedCodeInfo
+Global___GeneratedCodeInfo: _typing_extensions.TypeAlias = GeneratedCodeInfo  # noqa: Y015

@@ -38,9 +38,9 @@ class TestLiteImportsNonlite(_google_protobuf_message.Message):
         message: google.protobuf.unittest_pb2.TestAllTypes | None = ...,
         message_with_required: google.protobuf.unittest_pb2.TestRequired | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message", b"message", "message_with_required", b"message_with_required"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message", b"message", "message_with_required", b"message_with_required"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message", b"message", "message_with_required", b"message_with_required"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["message", b"message", "message_with_required", b"message_with_required"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestLiteImportsNonlite: _typing_extensions.TypeAlias = TestLiteImportsNonlite
+Global___TestLiteImportsNonlite: _typing_extensions.TypeAlias = TestLiteImportsNonlite  # noqa: Y015

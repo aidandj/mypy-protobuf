@@ -33,4 +33,4 @@ class Proto3FileExtensions(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___Proto3FileExtensions: _typing_extensions.TypeAlias = Proto3FileExtensions
+Global___Proto3FileExtensions: _typing_extensions.TypeAlias = Proto3FileExtensions  # noqa: Y015

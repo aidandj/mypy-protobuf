@@ -26,7 +26,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _MethodOpt1:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _MethodOpt1EnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_MethodOpt1.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -37,11 +37,11 @@ class MethodOpt1(_MethodOpt1, metaclass=_MethodOpt1EnumTypeWrapper): ...
 
 METHODOPT1_VAL1: MethodOpt1.ValueType  # 1
 METHODOPT1_VAL2: MethodOpt1.ValueType  # 2
-Global___MethodOpt1: _typing_extensions.TypeAlias = MethodOpt1
+Global___MethodOpt1: _typing_extensions.TypeAlias = MethodOpt1  # noqa: Y015
 
 class _AggregateEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _AggregateEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_AggregateEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -50,7 +50,7 @@ class _AggregateEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper.
 class AggregateEnum(_AggregateEnum, metaclass=_AggregateEnumEnumTypeWrapper): ...
 
 VALUE: AggregateEnum.ValueType  # 1
-Global___AggregateEnum: _typing_extensions.TypeAlias = AggregateEnum
+Global___AggregateEnum: _typing_extensions.TypeAlias = AggregateEnum  # noqa: Y015
 
 @_typing.final
 class TestMessageWithCustomOptions(_google_protobuf_message.Message):
@@ -62,7 +62,7 @@ class TestMessageWithCustomOptions(_google_protobuf_message.Message):
 
     class _AnEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _AnEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[TestMessageWithCustomOptions._AnEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -87,9 +87,9 @@ class TestMessageWithCustomOptions(_google_protobuf_message.Message):
             key: _builtins.str | None = ...,
             value: _builtins.str | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     FIELD1_FIELD_NUMBER: _builtins.int
@@ -106,15 +106,15 @@ class TestMessageWithCustomOptions(_google_protobuf_message.Message):
         oneof_field: _builtins.int | None = ...,
         map_field: _collections_abc.Mapping[_builtins.str, _builtins.str] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["AnOneof", b"AnOneof", "field1", b"field1", "oneof_field", b"oneof_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["AnOneof", b"AnOneof", "field1", b"field1", "oneof_field", b"oneof_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["AnOneof", b"AnOneof", "field1", b"field1", "map_field", b"map_field", "oneof_field", b"oneof_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["AnOneof", b"AnOneof", "field1", b"field1", "map_field", b"map_field", "oneof_field", b"oneof_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_AnOneof: _typing_extensions.TypeAlias = _typing.Literal["oneof_field"]
-    _WhichOneofArgType_AnOneof: _typing_extensions.TypeAlias = _typing.Literal["AnOneof", b"AnOneof"]
+    _WhichOneofReturnType_AnOneof: _typing_extensions.TypeAlias = _typing.Literal["oneof_field"]  # noqa: Y015
+    _WhichOneofArgType_AnOneof: _typing_extensions.TypeAlias = _typing.Literal["AnOneof", b"AnOneof"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_AnOneof) -> _WhichOneofReturnType_AnOneof | None: ...
 
-Global___TestMessageWithCustomOptions: _typing_extensions.TypeAlias = TestMessageWithCustomOptions
+Global___TestMessageWithCustomOptions: _typing_extensions.TypeAlias = TestMessageWithCustomOptions  # noqa: Y015
 
 @_typing.final
 class CustomOptionFooRequest(_google_protobuf_message.Message):
@@ -128,7 +128,7 @@ class CustomOptionFooRequest(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionFooRequest: _typing_extensions.TypeAlias = CustomOptionFooRequest
+Global___CustomOptionFooRequest: _typing_extensions.TypeAlias = CustomOptionFooRequest  # noqa: Y015
 
 @_typing.final
 class CustomOptionFooResponse(_google_protobuf_message.Message):
@@ -138,7 +138,7 @@ class CustomOptionFooResponse(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionFooResponse: _typing_extensions.TypeAlias = CustomOptionFooResponse
+Global___CustomOptionFooResponse: _typing_extensions.TypeAlias = CustomOptionFooResponse  # noqa: Y015
 
 @_typing.final
 class CustomOptionFooClientMessage(_google_protobuf_message.Message):
@@ -148,7 +148,7 @@ class CustomOptionFooClientMessage(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionFooClientMessage: _typing_extensions.TypeAlias = CustomOptionFooClientMessage
+Global___CustomOptionFooClientMessage: _typing_extensions.TypeAlias = CustomOptionFooClientMessage  # noqa: Y015
 
 @_typing.final
 class CustomOptionFooServerMessage(_google_protobuf_message.Message):
@@ -158,7 +158,7 @@ class CustomOptionFooServerMessage(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionFooServerMessage: _typing_extensions.TypeAlias = CustomOptionFooServerMessage
+Global___CustomOptionFooServerMessage: _typing_extensions.TypeAlias = CustomOptionFooServerMessage  # noqa: Y015
 
 @_typing.final
 class DummyMessageContainingEnum(_google_protobuf_message.Message):
@@ -168,7 +168,7 @@ class DummyMessageContainingEnum(_google_protobuf_message.Message):
 
     class _TestEnumType:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _TestEnumTypeEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[DummyMessageContainingEnum._TestEnumType.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -183,7 +183,7 @@ class DummyMessageContainingEnum(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___DummyMessageContainingEnum: _typing_extensions.TypeAlias = DummyMessageContainingEnum
+Global___DummyMessageContainingEnum: _typing_extensions.TypeAlias = DummyMessageContainingEnum  # noqa: Y015
 
 @_typing.final
 class DummyMessageInvalidAsOptionType(_google_protobuf_message.Message):
@@ -193,7 +193,7 @@ class DummyMessageInvalidAsOptionType(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___DummyMessageInvalidAsOptionType: _typing_extensions.TypeAlias = DummyMessageInvalidAsOptionType
+Global___DummyMessageInvalidAsOptionType: _typing_extensions.TypeAlias = DummyMessageInvalidAsOptionType  # noqa: Y015
 
 @_typing.final
 class CustomOptionMinIntegerValues(_google_protobuf_message.Message):
@@ -203,7 +203,7 @@ class CustomOptionMinIntegerValues(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionMinIntegerValues: _typing_extensions.TypeAlias = CustomOptionMinIntegerValues
+Global___CustomOptionMinIntegerValues: _typing_extensions.TypeAlias = CustomOptionMinIntegerValues  # noqa: Y015
 
 @_typing.final
 class CustomOptionMaxIntegerValues(_google_protobuf_message.Message):
@@ -213,7 +213,7 @@ class CustomOptionMaxIntegerValues(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionMaxIntegerValues: _typing_extensions.TypeAlias = CustomOptionMaxIntegerValues
+Global___CustomOptionMaxIntegerValues: _typing_extensions.TypeAlias = CustomOptionMaxIntegerValues  # noqa: Y015
 
 @_typing.final
 class CustomOptionOtherValues(_google_protobuf_message.Message):
@@ -223,7 +223,7 @@ class CustomOptionOtherValues(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___CustomOptionOtherValues: _typing_extensions.TypeAlias = CustomOptionOtherValues
+Global___CustomOptionOtherValues: _typing_extensions.TypeAlias = CustomOptionOtherValues  # noqa: Y015
 
 @_typing.final
 class SettingRealsFromPositiveInts(_google_protobuf_message.Message):
@@ -233,7 +233,7 @@ class SettingRealsFromPositiveInts(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___SettingRealsFromPositiveInts: _typing_extensions.TypeAlias = SettingRealsFromPositiveInts
+Global___SettingRealsFromPositiveInts: _typing_extensions.TypeAlias = SettingRealsFromPositiveInts  # noqa: Y015
 
 @_typing.final
 class SettingRealsFromNegativeInts(_google_protobuf_message.Message):
@@ -243,7 +243,7 @@ class SettingRealsFromNegativeInts(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___SettingRealsFromNegativeInts: _typing_extensions.TypeAlias = SettingRealsFromNegativeInts
+Global___SettingRealsFromNegativeInts: _typing_extensions.TypeAlias = SettingRealsFromNegativeInts  # noqa: Y015
 
 @_typing.final
 class SettingRealsFromInf(_google_protobuf_message.Message):
@@ -253,7 +253,7 @@ class SettingRealsFromInf(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___SettingRealsFromInf: _typing_extensions.TypeAlias = SettingRealsFromInf
+Global___SettingRealsFromInf: _typing_extensions.TypeAlias = SettingRealsFromInf  # noqa: Y015
 
 @_typing.final
 class SettingRealsFromNegativeInf(_google_protobuf_message.Message):
@@ -263,7 +263,7 @@ class SettingRealsFromNegativeInf(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___SettingRealsFromNegativeInf: _typing_extensions.TypeAlias = SettingRealsFromNegativeInf
+Global___SettingRealsFromNegativeInf: _typing_extensions.TypeAlias = SettingRealsFromNegativeInf  # noqa: Y015
 
 @_typing.final
 class SettingRealsFromNan(_google_protobuf_message.Message):
@@ -273,7 +273,7 @@ class SettingRealsFromNan(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___SettingRealsFromNan: _typing_extensions.TypeAlias = SettingRealsFromNan
+Global___SettingRealsFromNan: _typing_extensions.TypeAlias = SettingRealsFromNan  # noqa: Y015
 
 @_typing.final
 class SettingRealsFromNegativeNan(_google_protobuf_message.Message):
@@ -283,7 +283,7 @@ class SettingRealsFromNegativeNan(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___SettingRealsFromNegativeNan: _typing_extensions.TypeAlias = SettingRealsFromNegativeNan
+Global___SettingRealsFromNegativeNan: _typing_extensions.TypeAlias = SettingRealsFromNegativeNan  # noqa: Y015
 
 @_typing.final
 class ComplexOptionType1(_google_protobuf_message.Message):
@@ -310,12 +310,12 @@ class ComplexOptionType1(_google_protobuf_message.Message):
         foo3: _builtins.int | None = ...,
         foo4: _collections_abc.Iterable[_builtins.int] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["foo", b"foo", "foo2", b"foo2", "foo3", b"foo3"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["foo", b"foo", "foo2", b"foo2", "foo3", b"foo3"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["foo", b"foo", "foo2", b"foo2", "foo3", b"foo3", "foo4", b"foo4"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["foo", b"foo", "foo2", b"foo2", "foo3", b"foo3", "foo4", b"foo4"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ComplexOptionType1: _typing_extensions.TypeAlias = ComplexOptionType1
+Global___ComplexOptionType1: _typing_extensions.TypeAlias = ComplexOptionType1  # noqa: Y015
 
 @_typing.final
 class ComplexOptionType2(_google_protobuf_message.Message):
@@ -334,9 +334,9 @@ class ComplexOptionType2(_google_protobuf_message.Message):
             *,
             waldo: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["waldo", b"waldo"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["waldo", b"waldo"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["waldo", b"waldo"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["waldo", b"waldo"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     BAR_FIELD_NUMBER: _builtins.int
@@ -358,12 +358,12 @@ class ComplexOptionType2(_google_protobuf_message.Message):
         fred: Global___ComplexOptionType2.ComplexOptionType4 | None = ...,
         barney: _collections_abc.Iterable[Global___ComplexOptionType2.ComplexOptionType4] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bar", b"bar", "baz", b"baz", "fred", b"fred"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bar", b"bar", "baz", b"baz", "fred", b"fred"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bar", b"bar", "barney", b"barney", "baz", b"baz", "fred", b"fred"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bar", b"bar", "barney", b"barney", "baz", b"baz", "fred", b"fred"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ComplexOptionType2: _typing_extensions.TypeAlias = ComplexOptionType2
+Global___ComplexOptionType2: _typing_extensions.TypeAlias = ComplexOptionType2  # noqa: Y015
 
 @_typing.final
 class ComplexOptionType3(_google_protobuf_message.Message):
@@ -380,9 +380,9 @@ class ComplexOptionType3(_google_protobuf_message.Message):
             *,
             plugh: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plugh", b"plugh"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plugh", b"plugh"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plugh", b"plugh"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plugh", b"plugh"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     MOO_FIELD_NUMBER: _builtins.int
@@ -396,12 +396,12 @@ class ComplexOptionType3(_google_protobuf_message.Message):
         moo: _builtins.int | None = ...,
         complexoptiontype5: Global___ComplexOptionType3.ComplexOptionType5 | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["complexoptiontype5", b"complexoptiontype5", "moo", b"moo"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["complexoptiontype5", b"complexoptiontype5", "moo", b"moo"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["complexoptiontype5", b"complexoptiontype5", "moo", b"moo"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["complexoptiontype5", b"complexoptiontype5", "moo", b"moo"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ComplexOptionType3: _typing_extensions.TypeAlias = ComplexOptionType3
+Global___ComplexOptionType3: _typing_extensions.TypeAlias = ComplexOptionType3  # noqa: Y015
 
 @_typing.final
 class ComplexOpt6(_google_protobuf_message.Message):
@@ -414,12 +414,12 @@ class ComplexOpt6(_google_protobuf_message.Message):
         *,
         xyzzy: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["xyzzy", b"xyzzy"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["xyzzy", b"xyzzy"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["xyzzy", b"xyzzy"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["xyzzy", b"xyzzy"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ComplexOpt6: _typing_extensions.TypeAlias = ComplexOpt6
+Global___ComplexOpt6: _typing_extensions.TypeAlias = ComplexOpt6  # noqa: Y015
 
 @_typing.final
 class VariousComplexOptions(_google_protobuf_message.Message):
@@ -431,7 +431,7 @@ class VariousComplexOptions(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___VariousComplexOptions: _typing_extensions.TypeAlias = VariousComplexOptions
+Global___VariousComplexOptions: _typing_extensions.TypeAlias = VariousComplexOptions  # noqa: Y015
 
 @_typing.final
 class AggregateMessageSet(_google_protobuf_message.Message):
@@ -446,7 +446,7 @@ class AggregateMessageSet(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___AggregateMessageSet: _typing_extensions.TypeAlias = AggregateMessageSet
+Global___AggregateMessageSet: _typing_extensions.TypeAlias = AggregateMessageSet  # noqa: Y015
 
 @_typing.final
 class AggregateMessageSetElement(_google_protobuf_message.Message):
@@ -461,12 +461,12 @@ class AggregateMessageSetElement(_google_protobuf_message.Message):
         *,
         s: _builtins.str | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["s", b"s"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["s", b"s"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["s", b"s"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["s", b"s"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___AggregateMessageSetElement: _typing_extensions.TypeAlias = AggregateMessageSetElement
+Global___AggregateMessageSetElement: _typing_extensions.TypeAlias = AggregateMessageSetElement  # noqa: Y015
 
 @_typing.final
 class Aggregate(_google_protobuf_message.Message):
@@ -510,12 +510,12 @@ class Aggregate(_google_protobuf_message.Message):
         mset: Global___AggregateMessageSet | None = ...,
         any: google.protobuf.any_pb2.Any | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any", b"any", "file", b"file", "i", b"i", "mset", b"mset", "s", b"s", "sub", b"sub"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any", b"any", "file", b"file", "i", b"i", "mset", b"mset", "s", b"s", "sub", b"sub"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any", b"any", "file", b"file", "i", b"i", "mset", b"mset", "s", b"s", "sub", b"sub"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any", b"any", "file", b"file", "i", b"i", "mset", b"mset", "s", b"s", "sub", b"sub"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Aggregate: _typing_extensions.TypeAlias = Aggregate
+Global___Aggregate: _typing_extensions.TypeAlias = Aggregate  # noqa: Y015
 
 @_typing.final
 class AggregateMessage(_google_protobuf_message.Message):
@@ -528,12 +528,12 @@ class AggregateMessage(_google_protobuf_message.Message):
         *,
         fieldname: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["fieldname", b"fieldname"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["fieldname", b"fieldname"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["fieldname", b"fieldname"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["fieldname", b"fieldname"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___AggregateMessage: _typing_extensions.TypeAlias = AggregateMessage
+Global___AggregateMessage: _typing_extensions.TypeAlias = AggregateMessage  # noqa: Y015
 
 @_typing.final
 class NestedOptionType(_google_protobuf_message.Message):
@@ -543,7 +543,7 @@ class NestedOptionType(_google_protobuf_message.Message):
 
     class _NestedEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _NestedEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[NestedOptionType._NestedEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -563,9 +563,9 @@ class NestedOptionType(_google_protobuf_message.Message):
             *,
             nested_field: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["nested_field", b"nested_field"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["nested_field", b"nested_field"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["nested_field", b"nested_field"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["nested_field", b"nested_field"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     NESTED_EXTENSION_FIELD_NUMBER: _builtins.int
@@ -574,7 +574,7 @@ class NestedOptionType(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___NestedOptionType: _typing_extensions.TypeAlias = NestedOptionType
+Global___NestedOptionType: _typing_extensions.TypeAlias = NestedOptionType  # noqa: Y015
 
 @_typing.final
 class OldOptionType(_google_protobuf_message.Message):
@@ -586,7 +586,7 @@ class OldOptionType(_google_protobuf_message.Message):
 
     class _TestEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _TestEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[OldOptionType._TestEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -602,12 +602,12 @@ class OldOptionType(_google_protobuf_message.Message):
         *,
         value: Global___OldOptionType.TestEnum.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___OldOptionType: _typing_extensions.TypeAlias = OldOptionType
+Global___OldOptionType: _typing_extensions.TypeAlias = OldOptionType  # noqa: Y015
 
 @_typing.final
 class NewOptionType(_google_protobuf_message.Message):
@@ -617,7 +617,7 @@ class NewOptionType(_google_protobuf_message.Message):
 
     class _TestEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _TestEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[NewOptionType._TestEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -635,12 +635,12 @@ class NewOptionType(_google_protobuf_message.Message):
         *,
         value: Global___NewOptionType.TestEnum.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___NewOptionType: _typing_extensions.TypeAlias = NewOptionType
+Global___NewOptionType: _typing_extensions.TypeAlias = NewOptionType  # noqa: Y015
 
 @_typing.final
 class TestMessageWithRequiredEnumOption(_google_protobuf_message.Message):
@@ -652,7 +652,7 @@ class TestMessageWithRequiredEnumOption(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___TestMessageWithRequiredEnumOption: _typing_extensions.TypeAlias = TestMessageWithRequiredEnumOption
+Global___TestMessageWithRequiredEnumOption: _typing_extensions.TypeAlias = TestMessageWithRequiredEnumOption  # noqa: Y015
 
 FILE_OPT1_FIELD_NUMBER: _builtins.int
 MESSAGE_OPT1_FIELD_NUMBER: _builtins.int

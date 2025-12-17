@@ -23,4 +23,4 @@ class LateLoadedOptionUser(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___LateLoadedOptionUser: _typing_extensions.TypeAlias = LateLoadedOptionUser
+Global___LateLoadedOptionUser: _typing_extensions.TypeAlias = LateLoadedOptionUser  # noqa: Y015

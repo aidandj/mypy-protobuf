@@ -44,9 +44,9 @@ class TestEmbedOptimizedForSize(_google_protobuf_message.Message):
         optional_message: google.protobuf.unittest_optimize_for_pb2.TestOptimizedForSize | None = ...,
         repeated_message: _collections_abc.Iterable[google.protobuf.unittest_optimize_for_pb2.TestOptimizedForSize] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["optional_message", b"optional_message"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["optional_message", b"optional_message"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["optional_message", b"optional_message", "repeated_message", b"repeated_message"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["optional_message", b"optional_message", "repeated_message", b"repeated_message"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestEmbedOptimizedForSize: _typing_extensions.TypeAlias = TestEmbedOptimizedForSize
+Global___TestEmbedOptimizedForSize: _typing_extensions.TypeAlias = TestEmbedOptimizedForSize  # noqa: Y015

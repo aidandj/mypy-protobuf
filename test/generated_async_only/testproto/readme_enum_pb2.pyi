@@ -18,7 +18,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _MyEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _MyEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_MyEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -29,4 +29,4 @@ class MyEnum(_MyEnum, metaclass=_MyEnumEnumTypeWrapper): ...
 
 HELLO: MyEnum.ValueType  # 0
 WORLD: MyEnum.ValueType  # 1
-Global___MyEnum: _typing_extensions.TypeAlias = MyEnum
+Global___MyEnum: _typing_extensions.TypeAlias = MyEnum  # noqa: Y015

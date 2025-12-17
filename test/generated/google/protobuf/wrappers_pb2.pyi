@@ -82,10 +82,10 @@ class DoubleValue(_google_protobuf_message.Message):
         *,
         value: _builtins.float = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___DoubleValue: _typing_extensions.TypeAlias = DoubleValue
+Global___DoubleValue: _typing_extensions.TypeAlias = DoubleValue  # noqa: Y015
 
 @_typing.final
 class FloatValue(_google_protobuf_message.Message):
@@ -107,10 +107,10 @@ class FloatValue(_google_protobuf_message.Message):
         *,
         value: _builtins.float = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FloatValue: _typing_extensions.TypeAlias = FloatValue
+Global___FloatValue: _typing_extensions.TypeAlias = FloatValue  # noqa: Y015
 
 @_typing.final
 class Int64Value(_google_protobuf_message.Message):
@@ -132,10 +132,10 @@ class Int64Value(_google_protobuf_message.Message):
         *,
         value: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Int64Value: _typing_extensions.TypeAlias = Int64Value
+Global___Int64Value: _typing_extensions.TypeAlias = Int64Value  # noqa: Y015
 
 @_typing.final
 class UInt64Value(_google_protobuf_message.Message):
@@ -157,10 +157,10 @@ class UInt64Value(_google_protobuf_message.Message):
         *,
         value: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___UInt64Value: _typing_extensions.TypeAlias = UInt64Value
+Global___UInt64Value: _typing_extensions.TypeAlias = UInt64Value  # noqa: Y015
 
 @_typing.final
 class Int32Value(_google_protobuf_message.Message):
@@ -182,10 +182,10 @@ class Int32Value(_google_protobuf_message.Message):
         *,
         value: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Int32Value: _typing_extensions.TypeAlias = Int32Value
+Global___Int32Value: _typing_extensions.TypeAlias = Int32Value  # noqa: Y015
 
 @_typing.final
 class UInt32Value(_google_protobuf_message.Message):
@@ -207,10 +207,10 @@ class UInt32Value(_google_protobuf_message.Message):
         *,
         value: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___UInt32Value: _typing_extensions.TypeAlias = UInt32Value
+Global___UInt32Value: _typing_extensions.TypeAlias = UInt32Value  # noqa: Y015
 
 @_typing.final
 class BoolValue(_google_protobuf_message.Message):
@@ -232,10 +232,10 @@ class BoolValue(_google_protobuf_message.Message):
         *,
         value: _builtins.bool = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___BoolValue: _typing_extensions.TypeAlias = BoolValue
+Global___BoolValue: _typing_extensions.TypeAlias = BoolValue  # noqa: Y015
 
 @_typing.final
 class StringValue(_google_protobuf_message.Message):
@@ -257,10 +257,10 @@ class StringValue(_google_protobuf_message.Message):
         *,
         value: _builtins.str = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___StringValue: _typing_extensions.TypeAlias = StringValue
+Global___StringValue: _typing_extensions.TypeAlias = StringValue  # noqa: Y015
 
 @_typing.final
 class BytesValue(_google_protobuf_message.Message):
@@ -282,7 +282,7 @@ class BytesValue(_google_protobuf_message.Message):
         *,
         value: _builtins.bytes = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___BytesValue: _typing_extensions.TypeAlias = BytesValue
+Global___BytesValue: _typing_extensions.TypeAlias = BytesValue  # noqa: Y015

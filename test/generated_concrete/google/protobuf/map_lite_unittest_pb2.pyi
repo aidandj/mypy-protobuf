@@ -29,7 +29,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _Proto2MapEnumLite:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _Proto2MapEnumLiteEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_Proto2MapEnumLite.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -42,11 +42,11 @@ class Proto2MapEnumLite(_Proto2MapEnumLite, metaclass=_Proto2MapEnumLiteEnumType
 PROTO2_MAP_ENUM_FOO_LITE: Proto2MapEnumLite.ValueType  # 0
 PROTO2_MAP_ENUM_BAR_LITE: Proto2MapEnumLite.ValueType  # 1
 PROTO2_MAP_ENUM_BAZ_LITE: Proto2MapEnumLite.ValueType  # 2
-Global___Proto2MapEnumLite: _typing_extensions.TypeAlias = Proto2MapEnumLite
+Global___Proto2MapEnumLite: _typing_extensions.TypeAlias = Proto2MapEnumLite  # noqa: Y015
 
 class _Proto2MapEnumPlusExtraLite:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _Proto2MapEnumPlusExtraLiteEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_Proto2MapEnumPlusExtraLite.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -61,11 +61,11 @@ E_PROTO2_MAP_ENUM_FOO_LITE: Proto2MapEnumPlusExtraLite.ValueType  # 0
 E_PROTO2_MAP_ENUM_BAR_LITE: Proto2MapEnumPlusExtraLite.ValueType  # 1
 E_PROTO2_MAP_ENUM_BAZ_LITE: Proto2MapEnumPlusExtraLite.ValueType  # 2
 E_PROTO2_MAP_ENUM_EXTRA_LITE: Proto2MapEnumPlusExtraLite.ValueType  # 3
-Global___Proto2MapEnumPlusExtraLite: _typing_extensions.TypeAlias = Proto2MapEnumPlusExtraLite
+Global___Proto2MapEnumPlusExtraLite: _typing_extensions.TypeAlias = Proto2MapEnumPlusExtraLite  # noqa: Y015
 
 class _MapEnumLite:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _MapEnumLiteEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_MapEnumLite.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -78,7 +78,7 @@ class MapEnumLite(_MapEnumLite, metaclass=_MapEnumLiteEnumTypeWrapper): ...
 MAP_ENUM_FOO_LITE: MapEnumLite.ValueType  # 0
 MAP_ENUM_BAR_LITE: MapEnumLite.ValueType  # 1
 MAP_ENUM_BAZ_LITE: MapEnumLite.ValueType  # 2
-Global___MapEnumLite: _typing_extensions.TypeAlias = MapEnumLite
+Global___MapEnumLite: _typing_extensions.TypeAlias = MapEnumLite  # noqa: Y015
 
 @_typing.final
 class TestMapLite(_google_protobuf_message.Message):
@@ -98,9 +98,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -117,9 +117,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -136,9 +136,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -155,9 +155,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -174,9 +174,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -193,9 +193,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -212,9 +212,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -231,9 +231,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -250,9 +250,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -269,9 +269,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -288,9 +288,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.float | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -307,9 +307,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.float | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -326,9 +326,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.bool | None = ...,
             value: _builtins.bool | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -345,9 +345,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.str | None = ...,
             value: _builtins.str | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -364,9 +364,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.bytes | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -383,9 +383,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___MapEnumLite.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -403,9 +403,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: google.protobuf.unittest_lite_pb2.ForeignMessageLite | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -422,9 +422,9 @@ class TestMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     MAP_INT32_INT32_FIELD_NUMBER: _builtins.int
@@ -503,12 +503,12 @@ class TestMapLite(_google_protobuf_message.Message):
         map_int32_foreign_message: _collections_abc.Mapping[_builtins.int, google.protobuf.unittest_lite_pb2.ForeignMessageLite] | None = ...,
         teboring: _collections_abc.Mapping[_builtins.int, _builtins.int] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64", "teboring", b"teboring"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64", "teboring", b"teboring"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64", "teboring", b"teboring"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64", "teboring", b"teboring"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestMapLite: _typing_extensions.TypeAlias = TestMapLite
+Global___TestMapLite: _typing_extensions.TypeAlias = TestMapLite  # noqa: Y015
 
 @_typing.final
 class TestArenaMapLite(_google_protobuf_message.Message):
@@ -528,9 +528,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -547,9 +547,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -566,9 +566,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -585,9 +585,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -604,9 +604,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -623,9 +623,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -642,9 +642,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -661,9 +661,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -680,9 +680,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -699,9 +699,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.int | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -718,9 +718,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.float | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -737,9 +737,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.float | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -756,9 +756,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.bool | None = ...,
             value: _builtins.bool | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -775,9 +775,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.str | None = ...,
             value: _builtins.str | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -794,9 +794,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: _builtins.bytes | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -813,9 +813,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___MapEnumLite.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -833,9 +833,9 @@ class TestArenaMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___ForeignMessageArenaLite | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     MAP_INT32_INT32_FIELD_NUMBER: _builtins.int
@@ -910,12 +910,12 @@ class TestArenaMapLite(_google_protobuf_message.Message):
         map_int32_enum: _collections_abc.Mapping[_builtins.int, Global___MapEnumLite.ValueType] | None = ...,
         map_int32_foreign_message: _collections_abc.Mapping[_builtins.int, Global___ForeignMessageArenaLite] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_bool_bool", b"map_bool_bool", "map_fixed32_fixed32", b"map_fixed32_fixed32", "map_fixed64_fixed64", b"map_fixed64_fixed64", "map_int32_bytes", b"map_int32_bytes", "map_int32_double", b"map_int32_double", "map_int32_enum", b"map_int32_enum", "map_int32_float", b"map_int32_float", "map_int32_foreign_message", b"map_int32_foreign_message", "map_int32_int32", b"map_int32_int32", "map_int64_int64", b"map_int64_int64", "map_sfixed32_sfixed32", b"map_sfixed32_sfixed32", "map_sfixed64_sfixed64", b"map_sfixed64_sfixed64", "map_sint32_sint32", b"map_sint32_sint32", "map_sint64_sint64", b"map_sint64_sint64", "map_string_string", b"map_string_string", "map_uint32_uint32", b"map_uint32_uint32", "map_uint64_uint64", b"map_uint64_uint64"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestArenaMapLite: _typing_extensions.TypeAlias = TestArenaMapLite
+Global___TestArenaMapLite: _typing_extensions.TypeAlias = TestArenaMapLite  # noqa: Y015
 
 @_typing.final
 class TestRequiredMessageMapLite(_google_protobuf_message.Message):
@@ -938,9 +938,9 @@ class TestRequiredMessageMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___TestRequiredLite | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     MAP_FIELD_FIELD_NUMBER: _builtins.int
@@ -951,12 +951,12 @@ class TestRequiredMessageMapLite(_google_protobuf_message.Message):
         *,
         map_field: _collections_abc.Mapping[_builtins.int, Global___TestRequiredLite] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_field", b"map_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_field", b"map_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_field", b"map_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_field", b"map_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestRequiredMessageMapLite: _typing_extensions.TypeAlias = TestRequiredMessageMapLite
+Global___TestRequiredMessageMapLite: _typing_extensions.TypeAlias = TestRequiredMessageMapLite  # noqa: Y015
 
 @_typing.final
 class TestEnumMapLite(_google_protobuf_message.Message):
@@ -976,9 +976,9 @@ class TestEnumMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___Proto2MapEnumLite.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -995,9 +995,9 @@ class TestEnumMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___Proto2MapEnumLite.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     KNOWN_MAP_FIELD_FIELD_NUMBER: _builtins.int
@@ -1012,12 +1012,12 @@ class TestEnumMapLite(_google_protobuf_message.Message):
         known_map_field: _collections_abc.Mapping[_builtins.int, Global___Proto2MapEnumLite.ValueType] | None = ...,
         unknown_map_field: _collections_abc.Mapping[_builtins.int, Global___Proto2MapEnumLite.ValueType] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestEnumMapLite: _typing_extensions.TypeAlias = TestEnumMapLite
+Global___TestEnumMapLite: _typing_extensions.TypeAlias = TestEnumMapLite  # noqa: Y015
 
 @_typing.final
 class TestEnumMapPlusExtraLite(_google_protobuf_message.Message):
@@ -1037,9 +1037,9 @@ class TestEnumMapPlusExtraLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___Proto2MapEnumPlusExtraLite.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -1056,9 +1056,9 @@ class TestEnumMapPlusExtraLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: Global___Proto2MapEnumPlusExtraLite.ValueType | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     KNOWN_MAP_FIELD_FIELD_NUMBER: _builtins.int
@@ -1073,12 +1073,12 @@ class TestEnumMapPlusExtraLite(_google_protobuf_message.Message):
         known_map_field: _collections_abc.Mapping[_builtins.int, Global___Proto2MapEnumPlusExtraLite.ValueType] | None = ...,
         unknown_map_field: _collections_abc.Mapping[_builtins.int, Global___Proto2MapEnumPlusExtraLite.ValueType] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["known_map_field", b"known_map_field", "unknown_map_field", b"unknown_map_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestEnumMapPlusExtraLite: _typing_extensions.TypeAlias = TestEnumMapPlusExtraLite
+Global___TestEnumMapPlusExtraLite: _typing_extensions.TypeAlias = TestEnumMapPlusExtraLite  # noqa: Y015
 
 @_typing.final
 class TestMessageMapLite(_google_protobuf_message.Message):
@@ -1099,9 +1099,9 @@ class TestMessageMapLite(_google_protobuf_message.Message):
             key: _builtins.int | None = ...,
             value: google.protobuf.unittest_lite_pb2.TestAllTypesLite | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     MAP_INT32_MESSAGE_FIELD_NUMBER: _builtins.int
@@ -1112,12 +1112,12 @@ class TestMessageMapLite(_google_protobuf_message.Message):
         *,
         map_int32_message: _collections_abc.Mapping[_builtins.int, google.protobuf.unittest_lite_pb2.TestAllTypesLite] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_int32_message", b"map_int32_message"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_int32_message", b"map_int32_message"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_int32_message", b"map_int32_message"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["map_int32_message", b"map_int32_message"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestMessageMapLite: _typing_extensions.TypeAlias = TestMessageMapLite
+Global___TestMessageMapLite: _typing_extensions.TypeAlias = TestMessageMapLite  # noqa: Y015
 
 @_typing.final
 class TestRequiredLite(_google_protobuf_message.Message):
@@ -1138,12 +1138,12 @@ class TestRequiredLite(_google_protobuf_message.Message):
         b: _builtins.int | None = ...,
         c: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b", "c", b"c"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b", "c", b"c"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b", "c", b"c"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a", "b", b"b", "c", b"c"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestRequiredLite: _typing_extensions.TypeAlias = TestRequiredLite
+Global___TestRequiredLite: _typing_extensions.TypeAlias = TestRequiredLite  # noqa: Y015
 
 @_typing.final
 class ForeignMessageArenaLite(_google_protobuf_message.Message):
@@ -1156,9 +1156,9 @@ class ForeignMessageArenaLite(_google_protobuf_message.Message):
         *,
         c: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["c", b"c"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["c", b"c"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["c", b"c"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["c", b"c"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ForeignMessageArenaLite: _typing_extensions.TypeAlias = ForeignMessageArenaLite
+Global___ForeignMessageArenaLite: _typing_extensions.TypeAlias = ForeignMessageArenaLite  # noqa: Y015

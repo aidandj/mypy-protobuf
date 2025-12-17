@@ -39,12 +39,12 @@ class ImportedMessage(_google_protobuf_message.Message):
         *,
         lazy_message: google.protobuf.unittest_lazy_dependencies_custom_option_pb2.LazyMessage | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["lazy_message", b"lazy_message"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["lazy_message", b"lazy_message"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["lazy_message", b"lazy_message"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["lazy_message", b"lazy_message"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ImportedMessage: _typing_extensions.TypeAlias = ImportedMessage
+Global___ImportedMessage: _typing_extensions.TypeAlias = ImportedMessage  # noqa: Y015
 
 @_typing.final
 class MessageCustomOption(_google_protobuf_message.Message):
@@ -54,7 +54,7 @@ class MessageCustomOption(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___MessageCustomOption: _typing_extensions.TypeAlias = MessageCustomOption
+Global___MessageCustomOption: _typing_extensions.TypeAlias = MessageCustomOption  # noqa: Y015
 
 @_typing.final
 class MessageCustomOption2(_google_protobuf_message.Message):
@@ -64,4 +64,4 @@ class MessageCustomOption2(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___MessageCustomOption2: _typing_extensions.TypeAlias = MessageCustomOption2
+Global___MessageCustomOption2: _typing_extensions.TypeAlias = MessageCustomOption2  # noqa: Y015

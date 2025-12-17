@@ -63,7 +63,7 @@ class SourceContext(_google_protobuf_message.Message):
         *,
         file_name: _builtins.str = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["file_name", b"file_name"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["file_name", b"file_name"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___SourceContext: _typing_extensions.TypeAlias = SourceContext
+Global___SourceContext: _typing_extensions.TypeAlias = SourceContext  # noqa: Y015

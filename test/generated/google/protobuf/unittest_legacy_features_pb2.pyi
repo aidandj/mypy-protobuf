@@ -31,9 +31,9 @@ class TestEditionsMessage(_google_protobuf_message.Message):
         required_field: _builtins.int | None = ...,
         delimited_field: Global___TestEditionsMessage | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["delimited_field", b"delimited_field", "required_field", b"required_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["delimited_field", b"delimited_field", "required_field", b"required_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["delimited_field", b"delimited_field", "required_field", b"required_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["delimited_field", b"delimited_field", "required_field", b"required_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestEditionsMessage: _typing_extensions.TypeAlias = TestEditionsMessage
+Global___TestEditionsMessage: _typing_extensions.TypeAlias = TestEditionsMessage  # noqa: Y015

@@ -32,9 +32,9 @@ class TestOneRepeatedField(_google_protobuf_message.Message):
         *,
         repeated_int32: _collections_abc.Iterable[_builtins.int] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_int32", b"repeated_int32"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_int32", b"repeated_int32"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_int32", b"repeated_int32"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_int32", b"repeated_int32"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestOneRepeatedField: _typing_extensions.TypeAlias = TestOneRepeatedField
+Global___TestOneRepeatedField: _typing_extensions.TypeAlias = TestOneRepeatedField  # noqa: Y015

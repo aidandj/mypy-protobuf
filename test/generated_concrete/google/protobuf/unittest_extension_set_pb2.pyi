@@ -31,7 +31,7 @@ class TestExtensionSet(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___TestExtensionSet: _typing_extensions.TypeAlias = TestExtensionSet
+Global___TestExtensionSet: _typing_extensions.TypeAlias = TestExtensionSet  # noqa: Y015
 
 @_typing.final
 class TestExtensionSetContainer(_google_protobuf_message.Message):
@@ -45,9 +45,9 @@ class TestExtensionSetContainer(_google_protobuf_message.Message):
         *,
         extension: Global___TestExtensionSet | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["extension", b"extension"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["extension", b"extension"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["extension", b"extension"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["extension", b"extension"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestExtensionSetContainer: _typing_extensions.TypeAlias = TestExtensionSetContainer
+Global___TestExtensionSetContainer: _typing_extensions.TypeAlias = TestExtensionSetContainer  # noqa: Y015

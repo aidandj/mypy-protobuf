@@ -46,12 +46,12 @@ class TestStringView(_google_protobuf_message.Message):
         repeated_string: _collections_abc.Iterable[_builtins.str] | None = ...,
         repeated_bytes: _collections_abc.Iterable[_builtins.bytes] | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_bytes", b"repeated_bytes", "repeated_string", b"repeated_string", "singular_bytes", b"singular_bytes", "singular_string", b"singular_string"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_bytes", b"repeated_bytes", "repeated_string", b"repeated_string", "singular_bytes", b"singular_bytes", "singular_string", b"singular_string"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["implicit_presence", b"implicit_presence", "repeated_bytes", b"repeated_bytes", "repeated_string", b"repeated_string", "singular_bytes", b"singular_bytes", "singular_string", b"singular_string"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["implicit_presence", b"implicit_presence", "repeated_bytes", b"repeated_bytes", "repeated_string", b"repeated_string", "singular_bytes", b"singular_bytes", "singular_string", b"singular_string"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestStringView: _typing_extensions.TypeAlias = TestStringView
+Global___TestStringView: _typing_extensions.TypeAlias = TestStringView  # noqa: Y015
 
 @_typing.final
 class TestStringViewExtension(_google_protobuf_message.Message):
@@ -61,7 +61,7 @@ class TestStringViewExtension(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___TestStringViewExtension: _typing_extensions.TypeAlias = TestStringViewExtension
+Global___TestStringViewExtension: _typing_extensions.TypeAlias = TestStringViewExtension  # noqa: Y015
 
 SINGULAR_STRING_VIEW_EXTENSION_FIELD_NUMBER: _builtins.int
 SINGULAR_BYTES_VIEW_EXTENSION_FIELD_NUMBER: _builtins.int

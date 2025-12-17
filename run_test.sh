@@ -244,16 +244,15 @@ for PY_VER in $PY_VER_UNIT_TESTS; do
     )
 
     (
-        # Clean up googleapis
-        rm -rf third_party/out/generated_googleapis
-    )
-
-    (
         # Run unit tests.
         source "$UNIT_TESTS_VENV"/bin/activate
         PYTHONPATH=test/generated py.test --ignore=test/generated --ignore=test/generated_sync_only --ignore=test/generated_async_only --ignore=third_party -v
     )
 done
+
+
+# Clean up googleapis
+rm -rf third_party/out/generated_googleapis
 
 # Report all errors at the end
 if [ -s "$ERROR_FILE" ]; then

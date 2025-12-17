@@ -47,9 +47,9 @@ class TestAny(_google_protobuf_message.Message):
         repeated_any_value: _collections_abc.Iterable[google.protobuf.any_pb2.Any] | None = ...,
         text: _builtins.str = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_value", b"any_value"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_value", b"any_value"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_value", b"any_value", "int32_value", b"int32_value", "repeated_any_value", b"repeated_any_value", "text", b"text"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_value", b"any_value", "int32_value", b"int32_value", "repeated_any_value", b"repeated_any_value", "text", b"text"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestAny: _typing_extensions.TypeAlias = TestAny
+Global___TestAny: _typing_extensions.TypeAlias = TestAny  # noqa: Y015

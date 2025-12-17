@@ -28,7 +28,7 @@ class MessageOptionsTestMsg(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___MessageOptionsTestMsg: _typing_extensions.TypeAlias = MessageOptionsTestMsg
+Global___MessageOptionsTestMsg: _typing_extensions.TypeAlias = MessageOptionsTestMsg  # noqa: Y015
 
 TEST_FIELD_EXTENSION_FIELD_NUMBER: _builtins.int
 SCALAR_OPTION_FIELD_NUMBER: _builtins.int

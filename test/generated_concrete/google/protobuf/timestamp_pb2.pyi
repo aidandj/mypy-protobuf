@@ -161,7 +161,7 @@ class Timestamp(_google_protobuf_message.Message, _google_protobuf_internal_well
         seconds: _builtins.int = ...,
         nanos: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["nanos", b"nanos", "seconds", b"seconds"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["nanos", b"nanos", "seconds", b"seconds"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Timestamp: _typing_extensions.TypeAlias = Timestamp
+Global___Timestamp: _typing_extensions.TypeAlias = Timestamp  # noqa: Y015

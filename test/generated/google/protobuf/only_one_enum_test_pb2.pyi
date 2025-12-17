@@ -18,7 +18,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _OnlyOneEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _OnlyOneEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_OnlyOneEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -33,4 +33,4 @@ class OnlyOneEnum(_OnlyOneEnum, metaclass=_OnlyOneEnumEnumTypeWrapper):
 
 ONLY_ONE_ENUM_DEFAULT: OnlyOneEnum.ValueType  # 0
 ONLY_ONE_ENUM_VALID: OnlyOneEnum.ValueType  # 10
-Global___OnlyOneEnum: _typing_extensions.TypeAlias = OnlyOneEnum
+Global___OnlyOneEnum: _typing_extensions.TypeAlias = OnlyOneEnum  # noqa: Y015

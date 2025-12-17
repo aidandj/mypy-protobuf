@@ -26,7 +26,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _ImportEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _ImportEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_ImportEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -39,11 +39,11 @@ class ImportEnum(_ImportEnum, metaclass=_ImportEnumEnumTypeWrapper): ...
 IMPORT_FOO: ImportEnum.ValueType  # 7
 IMPORT_BAR: ImportEnum.ValueType  # 8
 IMPORT_BAZ: ImportEnum.ValueType  # 9
-Global___ImportEnum: _typing_extensions.TypeAlias = ImportEnum
+Global___ImportEnum: _typing_extensions.TypeAlias = ImportEnum  # noqa: Y015
 
 class _ImportEnumForMap:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _ImportEnumForMapEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_ImportEnumForMap.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -57,7 +57,7 @@ class ImportEnumForMap(_ImportEnumForMap, metaclass=_ImportEnumForMapEnumTypeWra
 UNKNOWN: ImportEnumForMap.ValueType  # 0
 FOO: ImportEnumForMap.ValueType  # 1
 BAR: ImportEnumForMap.ValueType  # 2
-Global___ImportEnumForMap: _typing_extensions.TypeAlias = ImportEnumForMap
+Global___ImportEnumForMap: _typing_extensions.TypeAlias = ImportEnumForMap  # noqa: Y015
 
 @_typing.final
 class ImportMessage(_google_protobuf_message.Message):
@@ -70,9 +70,9 @@ class ImportMessage(_google_protobuf_message.Message):
         *,
         d: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ImportMessage: _typing_extensions.TypeAlias = ImportMessage
+Global___ImportMessage: _typing_extensions.TypeAlias = ImportMessage  # noqa: Y015

@@ -27,10 +27,10 @@ class lower(_google_protobuf_message.Message):
         *,
         a: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a", b"a"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___lower: _typing_extensions.TypeAlias = lower
+Global___lower: _typing_extensions.TypeAlias = lower  # noqa: Y015
 
 @_typing.final
 class Upper(_google_protobuf_message.Message):
@@ -44,12 +44,12 @@ class Upper(_google_protobuf_message.Message):
         *,
         Lower: Global___lower | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["Lower", b"Lower"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["Lower", b"Lower"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["Lower", b"Lower"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["Lower", b"Lower"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Upper: _typing_extensions.TypeAlias = Upper
+Global___Upper: _typing_extensions.TypeAlias = Upper  # noqa: Y015
 
 @_typing.final
 class lower2(_google_protobuf_message.Message):
@@ -63,9 +63,9 @@ class lower2(_google_protobuf_message.Message):
         *,
         upper: Global___Upper | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["upper", b"upper"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["upper", b"upper"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["upper", b"upper"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["upper", b"upper"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___lower2: _typing_extensions.TypeAlias = lower2
+Global___lower2: _typing_extensions.TypeAlias = lower2  # noqa: Y015

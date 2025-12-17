@@ -11,6 +11,11 @@ import sys
 import testproto.grpc.dummy_pb2
 import typing as _typing
 
+if sys.version_info >= (3, 11):
+    import typing as _typing_extensions
+else:
+    import typing_extensions as _typing_extensions
+
 if sys.version_info >= (3, 13):
     from warnings import deprecated as _deprecated
 else:
@@ -30,7 +35,7 @@ class DummyServiceStub:
     """DummyService"""
 
     @_typing.overload
-    def __new__(cls, channel: _grpc.Channel) -> DummyServiceStub: ...
+    def __new__(cls, channel: _grpc.Channel) -> _typing_extensions.Self: ...
     @_typing.overload
     def __new__(cls, channel: _grpc_aio.Channel) -> DummyServiceAsyncStub: ...
     UnaryUnary: _grpc.UnaryUnaryMultiCallable[testproto.grpc.dummy_pb2.DummyRequest, testproto.grpc.dummy_pb2.DummyReply]
@@ -94,7 +99,7 @@ class DeprecatedServiceStub:
     """Marking the service as deprecated"""
 
     @_typing.overload
-    def __new__(cls, channel: _grpc.Channel) -> DeprecatedServiceStub: ...
+    def __new__(cls, channel: _grpc.Channel) -> _typing_extensions.Self: ...
     @_typing.overload
     def __new__(cls, channel: _grpc_aio.Channel) -> DeprecatedServiceAsyncStub: ...
     DeprecatedMethod: _grpc.UnaryUnaryMultiCallable[testproto.grpc.dummy_pb2.DeprecatedRequest, testproto.grpc.dummy_pb2.DummyReply]
@@ -136,7 +141,7 @@ def add_DeprecatedServiceServicer_to_server(servicer: DeprecatedServiceServicer,
 
 class ManyRPCsServiceStub:
     @_typing.overload
-    def __new__(cls, channel: _grpc.Channel) -> ManyRPCsServiceStub: ...
+    def __new__(cls, channel: _grpc.Channel) -> _typing_extensions.Self: ...
     @_typing.overload
     def __new__(cls, channel: _grpc_aio.Channel) -> ManyRPCsServiceAsyncStub: ...
     Method1: _grpc.UnaryUnaryMultiCallable[testproto.grpc.dummy_pb2.ManyRequest1, testproto.grpc.dummy_pb2.ManyResponse1]
@@ -941,7 +946,7 @@ def add_ManyRPCsServiceServicer_to_server(servicer: ManyRPCsServiceServicer, ser
 
 class EmptyServiceStub:
     @_typing.overload
-    def __new__(cls, channel: _grpc.Channel) -> EmptyServiceStub: ...
+    def __new__(cls, channel: _grpc.Channel) -> _typing_extensions.Self: ...
     @_typing.overload
     def __new__(cls, channel: _grpc_aio.Channel) -> EmptyServiceAsyncStub: ...
 

@@ -27,7 +27,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _EnumFeature:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _EnumFeatureEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_EnumFeature.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -66,11 +66,11 @@ VALUE12: EnumFeature.ValueType  # 12
 VALUE13: EnumFeature.ValueType  # 13
 VALUE14: EnumFeature.ValueType  # 14
 VALUE15: EnumFeature.ValueType  # 15
-Global___EnumFeature: _typing_extensions.TypeAlias = EnumFeature
+Global___EnumFeature: _typing_extensions.TypeAlias = EnumFeature  # noqa: Y015
 
 class _UnstableEnumFeature:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _UnstableEnumFeatureEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_UnstableEnumFeature.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -87,11 +87,11 @@ UNSTABLE1: UnstableEnumFeature.ValueType  # 1
 UNSTABLE2: UnstableEnumFeature.ValueType  # 2
 UNSTABLE3: UnstableEnumFeature.ValueType  # 3
 UNSTABLE4: UnstableEnumFeature.ValueType  # 4
-Global___UnstableEnumFeature: _typing_extensions.TypeAlias = UnstableEnumFeature
+Global___UnstableEnumFeature: _typing_extensions.TypeAlias = UnstableEnumFeature  # noqa: Y015
 
 class _ValueLifetimeFeature:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _ValueLifetimeFeatureEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_ValueLifetimeFeature.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -112,7 +112,7 @@ VALUE_LIFETIME_EMPTY_SUPPORT: ValueLifetimeFeature.ValueType  # 3
 VALUE_LIFETIME_FUTURE: ValueLifetimeFeature.ValueType  # 4
 VALUE_LIFETIME_DEPRECATED: ValueLifetimeFeature.ValueType  # 5
 VALUE_LIFETIME_REMOVED: ValueLifetimeFeature.ValueType  # 6
-Global___ValueLifetimeFeature: _typing_extensions.TypeAlias = ValueLifetimeFeature
+Global___ValueLifetimeFeature: _typing_extensions.TypeAlias = ValueLifetimeFeature  # noqa: Y015
 
 @_typing.final
 class TestCustomFeatures(_google_protobuf_message.Message):
@@ -185,12 +185,12 @@ class TestCustomFeatures(_google_protobuf_message.Message):
         unstable_existing_feature: Global___UnstableEnumFeature.ValueType | None = ...,
         removed_unstable_feature: Global___UnstableEnumFeature.ValueType | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_field_feature", b"bool_field_feature", "enum_entry_feature", b"enum_entry_feature", "enum_feature", b"enum_feature", "extension_range_feature", b"extension_range_feature", "field_feature", b"field_feature", "file_feature", b"file_feature", "future_feature", b"future_feature", "legacy_feature", b"legacy_feature", "message_feature", b"message_feature", "method_feature", b"method_feature", "multiple_feature", b"multiple_feature", "new_unstable_feature", b"new_unstable_feature", "oneof_feature", b"oneof_feature", "removed_feature", b"removed_feature", "removed_unstable_feature", b"removed_unstable_feature", "same_edition_removed_feature", b"same_edition_removed_feature", "service_feature", b"service_feature", "source_feature", b"source_feature", "source_feature2", b"source_feature2", "unstable_existing_feature", b"unstable_existing_feature", "value_lifetime_feature", b"value_lifetime_feature"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_field_feature", b"bool_field_feature", "enum_entry_feature", b"enum_entry_feature", "enum_feature", b"enum_feature", "extension_range_feature", b"extension_range_feature", "field_feature", b"field_feature", "file_feature", b"file_feature", "future_feature", b"future_feature", "legacy_feature", b"legacy_feature", "message_feature", b"message_feature", "method_feature", b"method_feature", "multiple_feature", b"multiple_feature", "new_unstable_feature", b"new_unstable_feature", "oneof_feature", b"oneof_feature", "removed_feature", b"removed_feature", "removed_unstable_feature", b"removed_unstable_feature", "same_edition_removed_feature", b"same_edition_removed_feature", "service_feature", b"service_feature", "source_feature", b"source_feature", "source_feature2", b"source_feature2", "unstable_existing_feature", b"unstable_existing_feature", "value_lifetime_feature", b"value_lifetime_feature"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_field_feature", b"bool_field_feature", "enum_entry_feature", b"enum_entry_feature", "enum_feature", b"enum_feature", "extension_range_feature", b"extension_range_feature", "field_feature", b"field_feature", "file_feature", b"file_feature", "future_feature", b"future_feature", "legacy_feature", b"legacy_feature", "message_feature", b"message_feature", "method_feature", b"method_feature", "multiple_feature", b"multiple_feature", "new_unstable_feature", b"new_unstable_feature", "oneof_feature", b"oneof_feature", "removed_feature", b"removed_feature", "removed_unstable_feature", b"removed_unstable_feature", "same_edition_removed_feature", b"same_edition_removed_feature", "service_feature", b"service_feature", "source_feature", b"source_feature", "source_feature2", b"source_feature2", "unstable_existing_feature", b"unstable_existing_feature", "value_lifetime_feature", b"value_lifetime_feature"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bool_field_feature", b"bool_field_feature", "enum_entry_feature", b"enum_entry_feature", "enum_feature", b"enum_feature", "extension_range_feature", b"extension_range_feature", "field_feature", b"field_feature", "file_feature", b"file_feature", "future_feature", b"future_feature", "legacy_feature", b"legacy_feature", "message_feature", b"message_feature", "method_feature", b"method_feature", "multiple_feature", b"multiple_feature", "new_unstable_feature", b"new_unstable_feature", "oneof_feature", b"oneof_feature", "removed_feature", b"removed_feature", "removed_unstable_feature", b"removed_unstable_feature", "same_edition_removed_feature", b"same_edition_removed_feature", "service_feature", b"service_feature", "source_feature", b"source_feature", "source_feature2", b"source_feature2", "unstable_existing_feature", b"unstable_existing_feature", "value_lifetime_feature", b"value_lifetime_feature"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestCustomFeatures: _typing_extensions.TypeAlias = TestCustomFeatures
+Global___TestCustomFeatures: _typing_extensions.TypeAlias = TestCustomFeatures  # noqa: Y015
 
 TEST_FIELD_NUMBER: _builtins.int
 test: _google_protobuf_internal_extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.FeatureSet, Global___TestCustomFeatures]

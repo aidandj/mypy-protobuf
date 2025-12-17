@@ -27,9 +27,9 @@ class Simple3(_google_protobuf_message.Message):
         *,
         a_string: _builtins.str | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a_string", b"a_string"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a_string", b"a_string"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a_string", b"a_string"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["a_string", b"a_string"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Simple3: _typing_extensions.TypeAlias = Simple3
+Global___Simple3: _typing_extensions.TypeAlias = Simple3  # noqa: Y015

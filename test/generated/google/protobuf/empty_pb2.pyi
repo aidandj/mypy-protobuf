@@ -61,4 +61,4 @@ class Empty(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___Empty: _typing_extensions.TypeAlias = Empty
+Global___Empty: _typing_extensions.TypeAlias = Empty  # noqa: Y015

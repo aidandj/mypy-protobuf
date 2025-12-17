@@ -31,9 +31,9 @@ class SeparateFileExtension(_google_protobuf_message.Message):
         *,
         flag: _builtins.bool | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["flag", b"flag"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["flag", b"flag"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["flag", b"flag"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["flag", b"flag"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___SeparateFileExtension: _typing_extensions.TypeAlias = SeparateFileExtension
+Global___SeparateFileExtension: _typing_extensions.TypeAlias = SeparateFileExtension  # noqa: Y015

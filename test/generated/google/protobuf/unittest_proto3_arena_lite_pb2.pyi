@@ -29,7 +29,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _ForeignEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _ForeignEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_ForeignEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -44,7 +44,7 @@ FOREIGN_ZERO: ForeignEnum.ValueType  # 0
 FOREIGN_FOO: ForeignEnum.ValueType  # 4
 FOREIGN_BAR: ForeignEnum.ValueType  # 5
 FOREIGN_BAZ: ForeignEnum.ValueType  # 6
-Global___ForeignEnum: _typing_extensions.TypeAlias = ForeignEnum
+Global___ForeignEnum: _typing_extensions.TypeAlias = ForeignEnum  # noqa: Y015
 
 @_typing.final
 class TestAllTypes(_google_protobuf_message.Message):
@@ -56,7 +56,7 @@ class TestAllTypes(_google_protobuf_message.Message):
 
     class _NestedEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _NestedEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[TestAllTypes._NestedEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -90,7 +90,7 @@ class TestAllTypes(_google_protobuf_message.Message):
             *,
             bb: _builtins.int = ...,
         ) -> None: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bb", b"bb"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["bb", b"bb"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     OPTIONAL_INT32_FIELD_NUMBER: _builtins.int
@@ -307,15 +307,15 @@ class TestAllTypes(_google_protobuf_message.Message):
         oneof_string: _builtins.str = ...,
         oneof_bytes: _builtins.bytes = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["oneof_bytes", b"oneof_bytes", "oneof_field", b"oneof_field", "oneof_nested_message", b"oneof_nested_message", "oneof_string", b"oneof_string", "oneof_uint32", b"oneof_uint32", "optional_foreign_message", b"optional_foreign_message", "optional_import_message", b"optional_import_message", "optional_lazy_message", b"optional_lazy_message", "optional_nested_message", b"optional_nested_message", "optional_public_import_message", b"optional_public_import_message"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["oneof_bytes", b"oneof_bytes", "oneof_field", b"oneof_field", "oneof_nested_message", b"oneof_nested_message", "oneof_string", b"oneof_string", "oneof_uint32", b"oneof_uint32", "optional_foreign_message", b"optional_foreign_message", "optional_import_message", b"optional_import_message", "optional_lazy_message", b"optional_lazy_message", "optional_nested_message", b"optional_nested_message", "optional_public_import_message", b"optional_public_import_message"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["oneof_bytes", b"oneof_bytes", "oneof_field", b"oneof_field", "oneof_nested_message", b"oneof_nested_message", "oneof_string", b"oneof_string", "oneof_uint32", b"oneof_uint32", "optional_bool", b"optional_bool", "optional_bytes", b"optional_bytes", "optional_cord", b"optional_cord", "optional_double", b"optional_double", "optional_fixed32", b"optional_fixed32", "optional_fixed64", b"optional_fixed64", "optional_float", b"optional_float", "optional_foreign_enum", b"optional_foreign_enum", "optional_foreign_message", b"optional_foreign_message", "optional_import_message", b"optional_import_message", "optional_int32", b"optional_int32", "optional_int64", b"optional_int64", "optional_lazy_message", b"optional_lazy_message", "optional_nested_enum", b"optional_nested_enum", "optional_nested_message", b"optional_nested_message", "optional_public_import_message", b"optional_public_import_message", "optional_sfixed32", b"optional_sfixed32", "optional_sfixed64", b"optional_sfixed64", "optional_sint32", b"optional_sint32", "optional_sint64", b"optional_sint64", "optional_string", b"optional_string", "optional_string_piece", b"optional_string_piece", "optional_uint32", b"optional_uint32", "optional_uint64", b"optional_uint64", "repeated_bool", b"repeated_bool", "repeated_bytes", b"repeated_bytes", "repeated_cord", b"repeated_cord", "repeated_double", b"repeated_double", "repeated_fixed32", b"repeated_fixed32", "repeated_fixed64", b"repeated_fixed64", "repeated_float", b"repeated_float", "repeated_foreign_enum", b"repeated_foreign_enum", "repeated_foreign_message", b"repeated_foreign_message", "repeated_import_message", b"repeated_import_message", "repeated_int32", b"repeated_int32", "repeated_int64", b"repeated_int64", "repeated_lazy_message", b"repeated_lazy_message", "repeated_nested_enum", b"repeated_nested_enum", "repeated_nested_message", b"repeated_nested_message", "repeated_sfixed32", b"repeated_sfixed32", "repeated_sfixed64", b"repeated_sfixed64", "repeated_sint32", b"repeated_sint32", "repeated_sint64", b"repeated_sint64", "repeated_string", b"repeated_string", "repeated_string_piece", b"repeated_string_piece", "repeated_uint32", b"repeated_uint32", "repeated_uint64", b"repeated_uint64"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["oneof_bytes", b"oneof_bytes", "oneof_field", b"oneof_field", "oneof_nested_message", b"oneof_nested_message", "oneof_string", b"oneof_string", "oneof_uint32", b"oneof_uint32", "optional_bool", b"optional_bool", "optional_bytes", b"optional_bytes", "optional_cord", b"optional_cord", "optional_double", b"optional_double", "optional_fixed32", b"optional_fixed32", "optional_fixed64", b"optional_fixed64", "optional_float", b"optional_float", "optional_foreign_enum", b"optional_foreign_enum", "optional_foreign_message", b"optional_foreign_message", "optional_import_message", b"optional_import_message", "optional_int32", b"optional_int32", "optional_int64", b"optional_int64", "optional_lazy_message", b"optional_lazy_message", "optional_nested_enum", b"optional_nested_enum", "optional_nested_message", b"optional_nested_message", "optional_public_import_message", b"optional_public_import_message", "optional_sfixed32", b"optional_sfixed32", "optional_sfixed64", b"optional_sfixed64", "optional_sint32", b"optional_sint32", "optional_sint64", b"optional_sint64", "optional_string", b"optional_string", "optional_string_piece", b"optional_string_piece", "optional_uint32", b"optional_uint32", "optional_uint64", b"optional_uint64", "repeated_bool", b"repeated_bool", "repeated_bytes", b"repeated_bytes", "repeated_cord", b"repeated_cord", "repeated_double", b"repeated_double", "repeated_fixed32", b"repeated_fixed32", "repeated_fixed64", b"repeated_fixed64", "repeated_float", b"repeated_float", "repeated_foreign_enum", b"repeated_foreign_enum", "repeated_foreign_message", b"repeated_foreign_message", "repeated_import_message", b"repeated_import_message", "repeated_int32", b"repeated_int32", "repeated_int64", b"repeated_int64", "repeated_lazy_message", b"repeated_lazy_message", "repeated_nested_enum", b"repeated_nested_enum", "repeated_nested_message", b"repeated_nested_message", "repeated_sfixed32", b"repeated_sfixed32", "repeated_sfixed64", b"repeated_sfixed64", "repeated_sint32", b"repeated_sint32", "repeated_sint64", b"repeated_sint64", "repeated_string", b"repeated_string", "repeated_string_piece", b"repeated_string_piece", "repeated_uint32", b"repeated_uint32", "repeated_uint64", b"repeated_uint64"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["oneof_uint32", "oneof_nested_message", "oneof_string", "oneof_bytes"]
-    _WhichOneofArgType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["oneof_field", b"oneof_field"]
+    _WhichOneofReturnType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["oneof_uint32", "oneof_nested_message", "oneof_string", "oneof_bytes"]  # noqa: Y015
+    _WhichOneofArgType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["oneof_field", b"oneof_field"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_oneof_field) -> _WhichOneofReturnType_oneof_field | None: ...
 
-Global___TestAllTypes: _typing_extensions.TypeAlias = TestAllTypes
+Global___TestAllTypes: _typing_extensions.TypeAlias = TestAllTypes  # noqa: Y015
 
 @_typing.final
 class TestPackedTypes(_google_protobuf_message.Message):
@@ -383,10 +383,10 @@ class TestPackedTypes(_google_protobuf_message.Message):
         packed_bool: _collections_abc.Iterable[_builtins.bool] | None = ...,
         packed_enum: _collections_abc.Iterable[Global___ForeignEnum.ValueType] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["packed_bool", b"packed_bool", "packed_double", b"packed_double", "packed_enum", b"packed_enum", "packed_fixed32", b"packed_fixed32", "packed_fixed64", b"packed_fixed64", "packed_float", b"packed_float", "packed_int32", b"packed_int32", "packed_int64", b"packed_int64", "packed_sfixed32", b"packed_sfixed32", "packed_sfixed64", b"packed_sfixed64", "packed_sint32", b"packed_sint32", "packed_sint64", b"packed_sint64", "packed_uint32", b"packed_uint32", "packed_uint64", b"packed_uint64"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["packed_bool", b"packed_bool", "packed_double", b"packed_double", "packed_enum", b"packed_enum", "packed_fixed32", b"packed_fixed32", "packed_fixed64", b"packed_fixed64", "packed_float", b"packed_float", "packed_int32", b"packed_int32", "packed_int64", b"packed_int64", "packed_sfixed32", b"packed_sfixed32", "packed_sfixed64", b"packed_sfixed64", "packed_sint32", b"packed_sint32", "packed_sint64", b"packed_sint64", "packed_uint32", b"packed_uint32", "packed_uint64", b"packed_uint64"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestPackedTypes: _typing_extensions.TypeAlias = TestPackedTypes
+Global___TestPackedTypes: _typing_extensions.TypeAlias = TestPackedTypes  # noqa: Y015
 
 @_typing.final
 class TestUnpackedTypes(_google_protobuf_message.Message):
@@ -454,10 +454,10 @@ class TestUnpackedTypes(_google_protobuf_message.Message):
         repeated_bool: _collections_abc.Iterable[_builtins.bool] | None = ...,
         repeated_nested_enum: _collections_abc.Iterable[Global___TestAllTypes.NestedEnum.ValueType] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_bool", b"repeated_bool", "repeated_double", b"repeated_double", "repeated_fixed32", b"repeated_fixed32", "repeated_fixed64", b"repeated_fixed64", "repeated_float", b"repeated_float", "repeated_int32", b"repeated_int32", "repeated_int64", b"repeated_int64", "repeated_nested_enum", b"repeated_nested_enum", "repeated_sfixed32", b"repeated_sfixed32", "repeated_sfixed64", b"repeated_sfixed64", "repeated_sint32", b"repeated_sint32", "repeated_sint64", b"repeated_sint64", "repeated_uint32", b"repeated_uint32", "repeated_uint64", b"repeated_uint64"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["repeated_bool", b"repeated_bool", "repeated_double", b"repeated_double", "repeated_fixed32", b"repeated_fixed32", "repeated_fixed64", b"repeated_fixed64", "repeated_float", b"repeated_float", "repeated_int32", b"repeated_int32", "repeated_int64", b"repeated_int64", "repeated_nested_enum", b"repeated_nested_enum", "repeated_sfixed32", b"repeated_sfixed32", "repeated_sfixed64", b"repeated_sfixed64", "repeated_sint32", b"repeated_sint32", "repeated_sint64", b"repeated_sint64", "repeated_uint32", b"repeated_uint32", "repeated_uint64", b"repeated_uint64"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestUnpackedTypes: _typing_extensions.TypeAlias = TestUnpackedTypes
+Global___TestUnpackedTypes: _typing_extensions.TypeAlias = TestUnpackedTypes  # noqa: Y015
 
 @_typing.final
 class NestedTestAllTypes(_google_protobuf_message.Message):
@@ -477,12 +477,12 @@ class NestedTestAllTypes(_google_protobuf_message.Message):
         child: Global___NestedTestAllTypes | None = ...,
         payload: Global___TestAllTypes | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["child", b"child", "payload", b"payload"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["child", b"child", "payload", b"payload"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["child", b"child", "payload", b"payload"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["child", b"child", "payload", b"payload"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___NestedTestAllTypes: _typing_extensions.TypeAlias = NestedTestAllTypes
+Global___NestedTestAllTypes: _typing_extensions.TypeAlias = NestedTestAllTypes  # noqa: Y015
 
 @_typing.final
 class ForeignMessage(_google_protobuf_message.Message):
@@ -499,10 +499,10 @@ class ForeignMessage(_google_protobuf_message.Message):
         *,
         c: _builtins.int = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["c", b"c"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["c", b"c"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ForeignMessage: _typing_extensions.TypeAlias = ForeignMessage
+Global___ForeignMessage: _typing_extensions.TypeAlias = ForeignMessage  # noqa: Y015
 
 @_typing.final
 class TestEmptyMessage(_google_protobuf_message.Message):
@@ -514,4 +514,4 @@ class TestEmptyMessage(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___TestEmptyMessage: _typing_extensions.TypeAlias = TestEmptyMessage
+Global___TestEmptyMessage: _typing_extensions.TypeAlias = TestEmptyMessage  # noqa: Y015

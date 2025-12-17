@@ -220,7 +220,7 @@ class PkgWriter(object):
         If alias is true, then it will prefix the import with an underscore to prevent conflicts with builtin names
         """
         if path == "typing_extensions":
-            stabilization = {"TypeAlias": (3, 10), "TypeVar": (3, 13), "type_check_only": (3, 12)}
+            stabilization = {"TypeAlias": (3, 10), "TypeVar": (3, 13), "type_check_only": (3, 12), "Self": (3, 11)}
             assert name in stabilization
             if not self.typing_extensions_min or self.typing_extensions_min < stabilization[name]:
                 self.typing_extensions_min = stabilization[name]
@@ -444,7 +444,7 @@ class PkgWriter(object):
                     self._builtin("int"),
                 )
                 # Alias to the classic shorter definition "V"
-                wl("V: {} = ValueType", self._import("typing_extensions", "TypeAlias"))
+                wl("V: {} = ValueType  # noqa: Y015", self._import("typing_extensions", "TypeAlias"))
             wl("")
             wl(
                 "class {}({}[{}], {}):",
@@ -484,7 +484,7 @@ class PkgWriter(object):
                 scl + [d.EnumDescriptorProto.VALUE_FIELD_NUMBER],
             )
             if prefix == "" and not self.readable_stubs:
-                wl(f"{_mangle_global_identifier(class_name)}: {self._import('typing_extensions', 'TypeAlias')} = {class_name}")
+                wl(f"{_mangle_global_identifier(class_name)}: {self._import('typing_extensions', 'TypeAlias')} = {class_name}  # noqa: Y015")
             wl("")
 
     def write_messages(
@@ -597,7 +597,7 @@ class PkgWriter(object):
 
             if prefix == "" and not self.readable_stubs:
                 wl("")
-                wl(f"{_mangle_global_identifier(class_name)}: {self._import('typing_extensions', 'TypeAlias')} = {class_name}")
+                wl(f"{_mangle_global_identifier(class_name)}: {self._import('typing_extensions', 'TypeAlias')} = {class_name}  # noqa: Y015")
             wl("")
 
     def write_stringly_typed_fields(self, desc: d.DescriptorProto) -> None:
@@ -621,13 +621,13 @@ class PkgWriter(object):
             return
 
         if hf_fields:
-            wl("_HasFieldArgType: {} = {}[{}]", self._import("typing_extensions", "TypeAlias"), self._import("typing", "Literal"), hf_fields_text)
+            wl("_HasFieldArgType: {} = {}[{}]  # noqa: Y015", self._import("typing_extensions", "TypeAlias"), self._import("typing", "Literal"), hf_fields_text)
             wl(
                 "def HasField(self, field_name: _HasFieldArgType) -> {}: ...",
                 self._builtin("bool"),
             )
         if cf_fields:
-            wl("_ClearFieldArgType: {} = {}[{}]", self._import("typing_extensions", "TypeAlias"), self._import("typing", "Literal"), cf_fields_text)
+            wl("_ClearFieldArgType: {} = {}[{}]  # noqa: Y015", self._import("typing_extensions", "TypeAlias"), self._import("typing", "Literal"), cf_fields_text)
             wl(
                 "def ClearField(self, field_name: _ClearFieldArgType) -> None: ...",
             )
@@ -635,7 +635,7 @@ class PkgWriter(object):
         # Write type aliases first so overloads are not interrupted
         for wo_field, members in sorted(wo_fields.items()):
             wl(
-                "_WhichOneofReturnType_{}: {} = {}[{}]",
+                "_WhichOneofReturnType_{}: {} = {}[{}]  # noqa: Y015",
                 wo_field,
                 self._import("typing_extensions", "TypeAlias"),
                 self._import("typing", "Literal"),
@@ -643,7 +643,7 @@ class PkgWriter(object):
                 ", ".join(f'"{m}"' for m in members),
             )
             wl(
-                "_WhichOneofArgType_{}: {} = {}[{}]",
+                "_WhichOneofArgType_{}: {} = {}[{}]  # noqa: Y015",
                 wo_field,
                 self._import("typing_extensions", "TypeAlias"),
                 self._import("typing", "Literal"),
@@ -1000,7 +1000,7 @@ class PkgWriter(object):
                         wl(
                             "def __new__(cls, channel: {}) -> {}: ...",
                             self._import("grpc", "Channel"),
-                            class_name,
+                            self._import("typing_extensions", "Self"),
                         )
 
                         # Write async overload

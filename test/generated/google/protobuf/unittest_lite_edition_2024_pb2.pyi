@@ -18,7 +18,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _EnumNameStringView:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _EnumNameStringViewEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_EnumNameStringView.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -29,4 +29,4 @@ class EnumNameStringView(_EnumNameStringView, metaclass=_EnumNameStringViewEnumT
 
 ENUM_NAME_STRING_VIEW_DEFAULT: EnumNameStringView.ValueType  # 0
 ENUM_NAME_STRING_VIEW_ANOTHER_VALUE: EnumNameStringView.ValueType  # 1
-Global___EnumNameStringView: _typing_extensions.TypeAlias = EnumNameStringView
+Global___EnumNameStringView: _typing_extensions.TypeAlias = EnumNameStringView  # noqa: Y015

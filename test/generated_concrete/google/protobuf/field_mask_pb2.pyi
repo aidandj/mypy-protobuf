@@ -263,7 +263,7 @@ class FieldMask(_google_protobuf_message.Message, _google_protobuf_internal_well
         *,
         paths: _collections_abc.Iterable[_builtins.str] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["paths", b"paths"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["paths", b"paths"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___FieldMask: _typing_extensions.TypeAlias = FieldMask
+Global___FieldMask: _typing_extensions.TypeAlias = FieldMask  # noqa: Y015

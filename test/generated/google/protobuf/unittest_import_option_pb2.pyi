@@ -38,9 +38,9 @@ class TestMessage(_google_protobuf_message.Message):
         *,
         field1: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["field1", b"field1"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["field1", b"field1"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["field1", b"field1"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["field1", b"field1"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestMessage: _typing_extensions.TypeAlias = TestMessage
+Global___TestMessage: _typing_extensions.TypeAlias = TestMessage  # noqa: Y015

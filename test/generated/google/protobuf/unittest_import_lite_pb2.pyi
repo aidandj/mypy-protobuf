@@ -25,7 +25,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _ImportEnumLite:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _ImportEnumLiteEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_ImportEnumLite.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -38,7 +38,7 @@ class ImportEnumLite(_ImportEnumLite, metaclass=_ImportEnumLiteEnumTypeWrapper):
 IMPORT_LITE_FOO: ImportEnumLite.ValueType  # 7
 IMPORT_LITE_BAR: ImportEnumLite.ValueType  # 8
 IMPORT_LITE_BAZ: ImportEnumLite.ValueType  # 9
-Global___ImportEnumLite: _typing_extensions.TypeAlias = ImportEnumLite
+Global___ImportEnumLite: _typing_extensions.TypeAlias = ImportEnumLite  # noqa: Y015
 
 @_typing.final
 class ImportMessageLite(_google_protobuf_message.Message):
@@ -51,9 +51,9 @@ class ImportMessageLite(_google_protobuf_message.Message):
         *,
         d: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["d", b"d"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___ImportMessageLite: _typing_extensions.TypeAlias = ImportMessageLite
+Global___ImportMessageLite: _typing_extensions.TypeAlias = ImportMessageLite  # noqa: Y015

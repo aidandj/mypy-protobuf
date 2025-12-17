@@ -28,7 +28,7 @@ DESCRIPTOR: _google_protobuf_descriptor.FileDescriptor
 
 class _TopLevelEnum:
     ValueType = _typing.NewType("ValueType", _builtins.int)
-    V: _typing_extensions.TypeAlias = ValueType
+    V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
 class _TopLevelEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[_TopLevelEnum.ValueType], _builtins.type):
     DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -37,7 +37,7 @@ class _TopLevelEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._
 class TopLevelEnum(_TopLevelEnum, metaclass=_TopLevelEnumEnumTypeWrapper): ...
 
 TOP_LEVEL_UNKNOWN: TopLevelEnum.ValueType  # 0
-Global___TopLevelEnum: _typing_extensions.TypeAlias = TopLevelEnum
+Global___TopLevelEnum: _typing_extensions.TypeAlias = TopLevelEnum  # noqa: Y015
 
 @_typing.final
 class OptionsMessage(_google_protobuf_message.Message):
@@ -58,12 +58,12 @@ class OptionsMessage(_google_protobuf_message.Message):
         runtime_retention_field: _builtins.int | None = ...,
         source_retention_field: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plain_field", b"plain_field", "runtime_retention_field", b"runtime_retention_field", "source_retention_field", b"source_retention_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plain_field", b"plain_field", "runtime_retention_field", b"runtime_retention_field", "source_retention_field", b"source_retention_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plain_field", b"plain_field", "runtime_retention_field", b"runtime_retention_field", "source_retention_field", b"source_retention_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["plain_field", b"plain_field", "runtime_retention_field", b"runtime_retention_field", "source_retention_field", b"source_retention_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___OptionsMessage: _typing_extensions.TypeAlias = OptionsMessage
+Global___OptionsMessage: _typing_extensions.TypeAlias = OptionsMessage  # noqa: Y015
 
 @_typing.final
 class Extendee(_google_protobuf_message.Message):
@@ -73,7 +73,7 @@ class Extendee(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___Extendee: _typing_extensions.TypeAlias = Extendee
+Global___Extendee: _typing_extensions.TypeAlias = Extendee  # noqa: Y015
 
 @_typing.final
 class TopLevelMessage(_google_protobuf_message.Message):
@@ -81,7 +81,7 @@ class TopLevelMessage(_google_protobuf_message.Message):
 
     class _NestedEnum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _NestedEnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[TopLevelMessage._NestedEnum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -110,15 +110,15 @@ class TopLevelMessage(_google_protobuf_message.Message):
         f: _builtins.float | None = ...,
         i: _builtins.int | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["f", b"f", "i", b"i", "o", b"o"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["f", b"f", "i", b"i", "o", b"o"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["f", b"f", "i", b"i", "o", b"o"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["f", b"f", "i", b"i", "o", b"o"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_o: _typing_extensions.TypeAlias = _typing.Literal["i"]
-    _WhichOneofArgType_o: _typing_extensions.TypeAlias = _typing.Literal["o", b"o"]
+    _WhichOneofReturnType_o: _typing_extensions.TypeAlias = _typing.Literal["i"]  # noqa: Y015
+    _WhichOneofArgType_o: _typing_extensions.TypeAlias = _typing.Literal["o", b"o"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_o) -> _WhichOneofReturnType_o | None: ...
 
-Global___TopLevelMessage: _typing_extensions.TypeAlias = TopLevelMessage
+Global___TopLevelMessage: _typing_extensions.TypeAlias = TopLevelMessage  # noqa: Y015
 
 PLAIN_OPTION_FIELD_NUMBER: _builtins.int
 RUNTIME_RETENTION_OPTION_FIELD_NUMBER: _builtins.int

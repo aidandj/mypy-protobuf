@@ -37,7 +37,7 @@ class InternalOptionsForce(_google_protobuf_message.Message):
 
     class _Enum:
         ValueType = _typing.NewType("ValueType", _builtins.int)
-        V: _typing_extensions.TypeAlias = ValueType
+        V: _typing_extensions.TypeAlias = ValueType  # noqa: Y015
 
     class _EnumEnumTypeWrapper(_google_protobuf_internal_enum_type_wrapper._EnumTypeWrapper[InternalOptionsForce._Enum.ValueType], _builtins.type):
         DESCRIPTOR: _google_protobuf_descriptor.EnumDescriptor
@@ -54,7 +54,7 @@ class InternalOptionsForce(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___InternalOptionsForce: _typing_extensions.TypeAlias = InternalOptionsForce
+Global___InternalOptionsForce: _typing_extensions.TypeAlias = InternalOptionsForce  # noqa: Y015
 
 @_typing.final
 class InternalFieldOptionsCpp(_google_protobuf_message.Message):
@@ -64,7 +64,7 @@ class InternalFieldOptionsCpp(_google_protobuf_message.Message):
         self,
     ) -> None: ...
 
-Global___InternalFieldOptionsCpp: _typing_extensions.TypeAlias = InternalFieldOptionsCpp
+Global___InternalFieldOptionsCpp: _typing_extensions.TypeAlias = InternalFieldOptionsCpp  # noqa: Y015
 
 @_typing.final
 class InternalFieldOptions(_google_protobuf_message.Message):
@@ -78,12 +78,12 @@ class InternalFieldOptions(_google_protobuf_message.Message):
         *,
         cpp: Global___InternalFieldOptionsCpp | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cpp", b"cpp"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cpp", b"cpp"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cpp", b"cpp"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["cpp", b"cpp"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___InternalFieldOptions: _typing_extensions.TypeAlias = InternalFieldOptions
+Global___InternalFieldOptions: _typing_extensions.TypeAlias = InternalFieldOptions  # noqa: Y015
 
 INTERNAL_FIELD_OPTIONS_FIELD_NUMBER: _builtins.int
 internal_field_options: _google_protobuf_internal_extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.FieldOptions, Global___InternalFieldOptions]

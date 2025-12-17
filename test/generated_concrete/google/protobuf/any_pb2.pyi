@@ -177,7 +177,7 @@ class Any(_google_protobuf_message.Message, _google_protobuf_internal_well_known
         type_url: _builtins.str = ...,
         value: _builtins.bytes = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["type_url", b"type_url", "value", b"value"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["type_url", b"type_url", "value", b"value"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___Any: _typing_extensions.TypeAlias = Any
+Global___Any: _typing_extensions.TypeAlias = Any  # noqa: Y015

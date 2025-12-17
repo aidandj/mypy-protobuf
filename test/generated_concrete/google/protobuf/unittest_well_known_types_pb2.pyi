@@ -125,12 +125,12 @@ class TestWellKnownTypes(_google_protobuf_message.Message):
         bytes_field: google.protobuf.wrappers_pb2.BytesValue | None = ...,
         value_field: google.protobuf.struct_pb2.Value | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field", "value_field", b"value_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field", "value_field", b"value_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field", "value_field", b"value_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field", "value_field", b"value_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___TestWellKnownTypes: _typing_extensions.TypeAlias = TestWellKnownTypes
+Global___TestWellKnownTypes: _typing_extensions.TypeAlias = TestWellKnownTypes  # noqa: Y015
 
 @_typing.final
 class RepeatedWellKnownTypes(_google_protobuf_message.Message):
@@ -216,10 +216,10 @@ class RepeatedWellKnownTypes(_google_protobuf_message.Message):
         string_field: _collections_abc.Iterable[google.protobuf.wrappers_pb2.StringValue] | None = ...,
         bytes_field: _collections_abc.Iterable[google.protobuf.wrappers_pb2.BytesValue] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___RepeatedWellKnownTypes: _typing_extensions.TypeAlias = RepeatedWellKnownTypes
+Global___RepeatedWellKnownTypes: _typing_extensions.TypeAlias = RepeatedWellKnownTypes  # noqa: Y015
 
 @_typing.final
 class OneofWellKnownTypes(_google_protobuf_message.Message):
@@ -301,15 +301,15 @@ class OneofWellKnownTypes(_google_protobuf_message.Message):
         string_field: google.protobuf.wrappers_pb2.StringValue | None = ...,
         bytes_field: google.protobuf.wrappers_pb2.BytesValue | None = ...,
     ) -> None: ...
-    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "oneof_field", b"oneof_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]
+    _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "oneof_field", b"oneof_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]  # noqa: Y015
     def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "oneof_field", b"oneof_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "oneof_field", b"oneof_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
-    _WhichOneofReturnType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["any_field", "api_field", "duration_field", "empty_field", "field_mask_field", "source_context_field", "struct_field", "timestamp_field", "type_field", "double_field", "float_field", "int64_field", "uint64_field", "int32_field", "uint32_field", "bool_field", "string_field", "bytes_field"]
-    _WhichOneofArgType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["oneof_field", b"oneof_field"]
+    _WhichOneofReturnType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["any_field", "api_field", "duration_field", "empty_field", "field_mask_field", "source_context_field", "struct_field", "timestamp_field", "type_field", "double_field", "float_field", "int64_field", "uint64_field", "int32_field", "uint32_field", "bool_field", "string_field", "bytes_field"]  # noqa: Y015
+    _WhichOneofArgType_oneof_field: _typing_extensions.TypeAlias = _typing.Literal["oneof_field", b"oneof_field"]  # noqa: Y015
     def WhichOneof(self, oneof_group: _WhichOneofArgType_oneof_field) -> _WhichOneofReturnType_oneof_field | None: ...
 
-Global___OneofWellKnownTypes: _typing_extensions.TypeAlias = OneofWellKnownTypes
+Global___OneofWellKnownTypes: _typing_extensions.TypeAlias = OneofWellKnownTypes  # noqa: Y015
 
 @_typing.final
 class MapWellKnownTypes(_google_protobuf_message.Message):
@@ -335,9 +335,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.any_pb2.Any | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -355,9 +355,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.api_pb2.Api | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -375,9 +375,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.duration_pb2.Duration | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -395,9 +395,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.empty_pb2.Empty | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -415,9 +415,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.field_mask_pb2.FieldMask | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -435,9 +435,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.source_context_pb2.SourceContext | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -455,9 +455,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.struct_pb2.Struct | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -475,9 +475,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.timestamp_pb2.Timestamp | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -495,9 +495,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.type_pb2.Type | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -515,9 +515,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.DoubleValue | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -535,9 +535,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.FloatValue | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -555,9 +555,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.Int64Value | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -575,9 +575,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.UInt64Value | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -595,9 +595,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.Int32Value | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -615,9 +615,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.UInt32Value | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -635,9 +635,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.BoolValue | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -655,9 +655,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.StringValue | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     @_typing.final
@@ -675,9 +675,9 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
             key: _builtins.int = ...,
             value: google.protobuf.wrappers_pb2.BytesValue | None = ...,
         ) -> None: ...
-        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]
+        _HasFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["value", b"value"]  # noqa: Y015
         def HasField(self, field_name: _HasFieldArgType) -> _builtins.bool: ...
-        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]
+        _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["key", b"key", "value", b"value"]  # noqa: Y015
         def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
     ANY_FIELD_FIELD_NUMBER: _builtins.int
@@ -756,7 +756,7 @@ class MapWellKnownTypes(_google_protobuf_message.Message):
         string_field: _collections_abc.Mapping[_builtins.int, google.protobuf.wrappers_pb2.StringValue] | None = ...,
         bytes_field: _collections_abc.Mapping[_builtins.int, google.protobuf.wrappers_pb2.BytesValue] | None = ...,
     ) -> None: ...
-    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]
+    _ClearFieldArgType: _typing_extensions.TypeAlias = _typing.Literal["any_field", b"any_field", "api_field", b"api_field", "bool_field", b"bool_field", "bytes_field", b"bytes_field", "double_field", b"double_field", "duration_field", b"duration_field", "empty_field", b"empty_field", "field_mask_field", b"field_mask_field", "float_field", b"float_field", "int32_field", b"int32_field", "int64_field", b"int64_field", "source_context_field", b"source_context_field", "string_field", b"string_field", "struct_field", b"struct_field", "timestamp_field", b"timestamp_field", "type_field", b"type_field", "uint32_field", b"uint32_field", "uint64_field", b"uint64_field"]  # noqa: Y015
     def ClearField(self, field_name: _ClearFieldArgType) -> None: ...
 
-Global___MapWellKnownTypes: _typing_extensions.TypeAlias = MapWellKnownTypes
+Global___MapWellKnownTypes: _typing_extensions.TypeAlias = MapWellKnownTypes  # noqa: Y015
