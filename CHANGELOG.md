@@ -13,6 +13,9 @@
 - Add `_WhichOneofArgType_<oneof_name>` and `_WhichOneofReturnType_<oneof_name>` type aliases
 - Use `__new__` overloads for async stubs instead of `TypeVar` based `__init__` overloads.
   - https://github.com/nipunn1313/mypy-protobuf/issues/707
+- Use `builtins.property` to handle conflicts with fields named `property`
+- Mangle all non provided message type imports, this prevents conflicts with field names like `collections`, `builtins`, etc.
+  - Do not mangle message imports, as that would be a breaking change.
 
 ## 3.7.0
 
